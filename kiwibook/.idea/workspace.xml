@@ -14,8 +14,6 @@
     <file path="$PROJECT_DIR$/../kiwi/kiwi/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415191273486" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/untitled/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415192093011" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/untitled/urls.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415192093012" ignored="false" />
-    <file path="$USER_HOME$/Documents/GitHub/narm2/kiwibook/mydatabase/models.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415281101997" ignored="false" />
-    <file path="$USER_HOME$/Documents/GitHub/narm2/kiwibook/kiwibook/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415281101997" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +106,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,7 +173,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,7 +280,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2929985" sideWeight="0.7968" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3021309" sideWeight="0.7968" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
