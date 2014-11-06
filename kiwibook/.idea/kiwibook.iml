@@ -4,7 +4,7 @@
     <facet type="django" name="Django">
       <configuration>
         <option name="rootFolder" value="$MODULE_DIR$" />
-        <option name="settingsModule" value="untitled/settings.py" />
+        <option name="settingsModule" value="kiwibook/settings.py" />
         <option name="manageScript" value="manage.py" />
       </configuration>
     </facet>
@@ -18,7 +18,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="C:\Users\pegah\PycharmProjects\untitled\templates" />
+        <option value="D:\uni\darsi\term7\narm2\kiwibook\templates" />
       </list>
     </option>
   </component>
