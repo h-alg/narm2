@@ -13,8 +13,6 @@ class Users(models.Model):
     hesab = models.IntegerField()
     favorite = ['-abc']
 
-    def __unicode__(self):
-        return self.username
 
 class Book(models.Model):
     id_book = models.IntegerField()
@@ -29,6 +27,3 @@ class Book(models.Model):
     context = models.CharField(max_length=100)
     sell_public = models.IntegerField()
     sell_users = models.IntegerField()
-
-    def __unicode__(self):
-        return self.id_book
