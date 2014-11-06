@@ -14,6 +14,7 @@
     <file path="$PROJECT_DIR$/../kiwi/kiwi/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415191273486" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/untitled/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415192093011" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/untitled/urls.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415192093012" ignored="false" />
+    <file path="$USER_HOME$/Desktop/kiwibook/mydatabase/models.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415281101997" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="41" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0">
+            <state line="79" column="41" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -45,7 +46,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="496" selection-end="496" vertical-scroll-proportion="0.36324787">
+            <state line="13" column="6" selection-start="576" selection-end="576" vertical-scroll-proportion="0.3432836">
               <folding />
             </state>
           </provider>
@@ -274,17 +275,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1372" height="780" extended-state="1" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28396946" sideWeight="0.79549116" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29312977" sideWeight="0.79710144" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20450886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20289855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -378,9 +379,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="39" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="5" selection-start="39" selection-end="44" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/wsgi.py">
@@ -430,14 +429,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="41" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0">
+        <state line="79" column="41" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="496" selection-end="496" vertical-scroll-proportion="0.36324787">
+        <state line="13" column="6" selection-start="576" selection-end="576" vertical-scroll-proportion="0.3432836">
           <folding />
         </state>
       </provider>

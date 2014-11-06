@@ -19,7 +19,7 @@ from mydatabase.models import Book
 
 from django.http import HttpResponse 
 
-
+import codecs
 
 
 ##############DPI
@@ -81,14 +81,15 @@ def sabtenam(request):
                     ename = True
                 elif len (str(family)) > 30 or len(str(family)) < 3 :
                     efamily = True
-                elif len (str(password)) > 15 or len(str(password)) < 4 :
+                elif len (str(password)) > 10 or len(str(password)) < 4 :
                     epassword = True
                 #elif len (str(address)) > 15 or len(str(name)) < 3 :
                     #ename = True
                 elif len(str(address)) == 0 :
                     eaddress = True
                 #elif len(str(email)) == 0 :
-                elif not(((str(email).find("@") < str(email).find(".") ) and (str(email).find("@")!= -1 ))):
+                #elif not(((str(email).find("@") < str(email).find(".") ) and (str(email).find("@")!= -1 ))):
+                elif (email.find("@") == -1 or( email.find(".ir") + 3 != len(email) and email.find(".com") + 4 != len(email) and email.find(".org") + 4 != len(email))or len(email)<5):
                     eemail = True
                 else:
                     new_user=Users(name=name,password= password , email = email , username= username , adress = address , family = family , hesab = 0)
