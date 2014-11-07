@@ -1,6 +1,14 @@
 from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response
+from django.template.loader import get_template
+from django.template import Context
+from django.template import RequestContext , loader
+from django.shortcuts import render_to_response 
+from django.http import HttpResponse
+from django.core.context_processors import csrf 
+from django.http import HttpResponse 
+import datetime
 #from __future__ import unicode_literals
 import codecs
 
@@ -28,9 +36,9 @@ from django.http import HttpResponse
 
 ############
 
-def hello(request):
+def kerase(request):
     mm=[["a","b","c"],["d" , "e" , "f"],["h" , "i" , "k"]]
-    return render_to_response('hello.html' )
+    return render_to_response('base1.html' )
 
 
 
@@ -107,9 +115,12 @@ def sabtenam(request):
 
 ####login
 def login(request):
-    if 'username' in request.GET and request.GET['username']:
-        username = request.GET['username']
-        password = request.GET['password']
+    #if 'username' in request.GET and request.GET['username']:
+       # username = request.GET['username']
+        #password = request.GET['password']
+    if 'username' in request.POST and request.POST['username']:
+        username = request.POST['username']
+        password = request.POST['password']
         
         
         
@@ -122,7 +133,7 @@ def login(request):
         else :
             epassword= False
             vorood = True
-            list_user = users.objects.filter(username__icontains=f)
+            list_user = Users.objects.filter(username__icontains=username)
             str_user = str (list_user)
             #mona = sazman.objects.filter(name__icontains=f)
             #nn = str(mona)
@@ -131,41 +142,32 @@ def login(request):
                 
                
             else :
-                new_user = users.objects.get(username__icontains=username)
+                new_user = Users.objects.get(username__icontains=username)
                 if new_user.password != password:
                     epassword = True
                 else :
-                    return render_to_response('base2.html' , {"f" : f})
-                    
-
-
-
+                    template=loader.get_template('base2.html')
+                    #template=loader.get_template('aa.html')
+                    context=RequestContext(request,{'epassword': epassword , 'username':username })
+                    return HttpResponse(template.render(context))
+                    #return render_to_response('base2.html' , {"username" : username})
+                               
                 
-                if mm=="[]" and nn != "[]":
-                    ll=sazman.objects.get(name__icontains=f )
-                    if ll.sabtcode !=p :
-                        epas = True
-                    else:
-                        return render_to_response('base2.html' , {"f" : f})
-                        
-                elif mm!="[]" and nn == "[]":
-                    l=karbar.objects.get(name__icontains=f )
-                
-                    if l.password != p :
-                        epas = True
-                    elif l.password == p:
-                        if len(f) == 3:
-                           if p=="31372110":
-                              return render_to_response('base3.html')
-                           else:
-                              epas=True
-                        else :
-                            return render_to_response('skarbar.html', {'f' : f})
-                       
-
-        return render_to_response('login.html', {'epas': epas ,   'f' :f, 'p' : p , 'error': vorood ,  "sub" : sub , "ff" : mina})
+        template=loader.get_template('login.html')
+        #template=loader.get_template('aa.html')
+        context=RequestContext(request,{'epassword': epassword ,   'username' :username, 'password' : password , 'error': vorood ,  "sub" : sub , "list_user" : list_user})
+        return HttpResponse(template.render(context))
+        #return render_to_response('login.html', {'epassword': epassword ,   'username' :username, 'oassword' : password , 'error': vorood ,  "sub" : sub , "list_user" : list_user})
 
     else :
         sub = False
-        return render_to_response('login.html', {'error': False , "sub" : sub})
+        template=loader.get_template('login.html')
+        #template=loader.get_template('aa.html')
+        context=RequestContext(request,{'error': False , "sub" : sub  })
+        return HttpResponse(template.render(context))
+        #return render_to_response('login.html', {'error': False , "sub" : sub})
 
+
+def aa(request,username):
+    mm=[["a","b","c"],["d" , "e" , "f"],["h" , "i" , "k"]]
+    return render_to_response('aa.html', {'username': username})

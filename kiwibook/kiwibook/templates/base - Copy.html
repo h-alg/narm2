@@ -257,16 +257,22 @@ $('#cssmenu1 > ul > li > a').click(function() {
 	
 	<div id="slideshow" >
 		<div>
-			<img src="http://dl.bourseiness.com//2014/07/dade2.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="https://www.royaltyexchange.com/wp-content/uploads/2014/06/education-books.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://dl.bourseiness.com//2014/07/dade-300x179.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://cdn.yjc.ir/files/fa/news/1392/9/8/1790129_775.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://pichamedpic.persiangig.com/image/CeGroup/DPI%2088.2.14/DPI_0001.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://marketingnews.ir/uploads/posts/2013-12/1386764159_21291.gif" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://www.dpi.ir/Content/media/image/2011/10/4006_orig.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://www.pedrambook.com/image/cache/data/products_send/10000005277-500x500.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+		</div>
+		<div>
+			<img src="http://www.360solutions.com/blog/wp-content/uploads/2012/07/books.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+		</div>
+		<div>
+			<img src="http://www.mojdehbook.com/BookImages/120526_280x382.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		
 
@@ -276,18 +282,42 @@ $('#cssmenu1 > ul > li > a').click(function() {
 
 	<div id='cssmenu'style="width:1300px;height:30px;position:absolute;right:10px;top:300px;">
 	<ul>
-	   <li><a href='http://127.0.0.1:8000/hello/'><span>صفحه اصلی</span></a></li>
+	   <li><a href='http://127.0.0.1:8000/kerase/'><span>صفحه اصلی</span></a></li>
 	   
-	   <li><a href='#'><span>درباره ما</span></a></li>
+	   <li class='last'><a href='#'><span>درباره ما</span></a></li>
 	   
 	   <li class='last'><a href='#'><span>تماس با ما</span></a></li>
-	   <li class='last'><a href='http://127.0.0.1:8000/sabtenam/'><span>ثبت نام</span></a></li>
+	   
 	</ul>
 	</div>
 
 
 
+{% block content %} 
 
+	<div id="aks" style="width:200px;height:200px;position:absolute;right:20px;top:20px;">
+	<img src="http://www.8pic.ir/images/twv67esno0n9qb2axr33.jpg" alt="aaa" align="middle" width="200px" height="200px" />
+	</div>
+
+	<div id="namk" style="background-color:#A8A8A8;width:500px;height:100px;position:absolute;right:280px;top:60px;">
+		<div dir="rtl" id="nam" ><center><p><center>
+			<font face="bnazanin" style="font-size: 20pt" color = "white"  > {{ja}}  </font> </p></center></div>
+	</div>
+
+	<div id="addressk" style="background-color:#A8A8A8;width:750px;height:80px;position:absolute;right:45px;top:240px;">
+		<div dir="rtl" id="address" ><center><p> <center>
+			<font face="bnazanin" style="font-size: 20pt" color = "black"  > {{adress}}  </font>  </p></center></div>
+	</div>
+
+	<div id="tozihatk" style="background-color:#A8A8A8;width:750px;height:200px;position:absolute;right:45px;top:340px;">
+		<div dir="rtl" id="tozihat" ><center><p> <center>
+			<font face="bnazanin" style="font-size: 20pt" color = "black"  > {{sharh}}  </font> </p></center></div>	
+	</div>
+	
+	
+
+
+{% endblock %} 
 
 <div id='cssmenu1'style=";width:200px;height:30px;position:absolute;right:10px;top:380px;">
 <ul>
@@ -301,15 +331,15 @@ $('#cssmenu1 > ul > li > a').click(function() {
     </li>
    
     
-	<li class='active'><a href='http://127.0.0.1:8000/info/'><span dir="rtl"><center> دریافت اطلاعات اموال  </center></span></a></li>
-	<li class='active'><a href='http://127.0.0.1:8000/search/'><span dir="rtl"><center>  جست و جو    </center></span></a></li>
+	<li class='active'><a href='http://127.0.0.1:8000/sabtenam/'><span dir="rtl"><center> ثبت نام  </center></span></a></li>
+	<li class='active'><a href='http://127.0.0.1:8000/login/'><span dir="rtl"><center>  ورود به سایت    </center></span></a></li>
 	
 </ul>
 </div>
 
 	
 	<div id="a" style="background-color:#282828 ;width:1050px;height:1200px;position:absolute;right:230px;top:380px;">
-	{% block content %}
+{% block content1 %}
 
 	{% endblock %}
 	</div>
@@ -318,4 +348,4 @@ $('#cssmenu1 > ul > li > a').click(function() {
 
 </div>
 
- 
+
