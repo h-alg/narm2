@@ -8,8 +8,12 @@ from django.conf.urls.defaults import *
 from kiwibook.views import *
 
 urlpatterns = patterns('', 
-(r'^hello/$', hello),
+(r'^kerase/$', kerase),
 (r'^sabtenam/$', sabtenam),
+(r'^login/$', login),
+#(r'^aa/$', aa),
+(r'^aa/(?P<username>.+)/$', aa),
+
 
 
 
