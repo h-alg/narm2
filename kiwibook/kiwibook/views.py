@@ -103,3 +103,69 @@ def sabtenam(request):
         sub = False
         return render_to_response('sabtenam.html', {'error': False , "sub" : sub})
 
+
+
+####login
+def login(request):
+    if 'username' in request.GET and request.GET['username']:
+        username = request.GET['username']
+        password = request.GET['password']
+        
+        
+        
+
+        sub = True
+
+        if (not username) and (not password)  :
+            vorood = False
+
+        else :
+            epassword= False
+            vorood = True
+            list_user = users.objects.filter(username__icontains=f)
+            str_user = str (list_user)
+            #mona = sazman.objects.filter(name__icontains=f)
+            #nn = str(mona)
+            if str_user == "[]"  :
+                epassword = True
+                
+               
+            else :
+                new_user = users.objects.get(username__icontains=username)
+                if new_user.password != password:
+                    epassword = True
+                else :
+                    return render_to_response('base2.html' , {"f" : f})
+                    
+
+
+
+                
+                if mm=="[]" and nn != "[]":
+                    ll=sazman.objects.get(name__icontains=f )
+                    if ll.sabtcode !=p :
+                        epas = True
+                    else:
+                        return render_to_response('base2.html' , {"f" : f})
+                        
+                elif mm!="[]" and nn == "[]":
+                    l=karbar.objects.get(name__icontains=f )
+                
+                    if l.password != p :
+                        epas = True
+                    elif l.password == p:
+                        if len(f) == 3:
+                           if p=="31372110":
+                              return render_to_response('base3.html')
+                           else:
+                              epas=True
+                        else :
+                            return render_to_response('skarbar.html', {'f' : f})
+                       
+
+        return render_to_response('login.html', {'epas': epas ,   'f' :f, 'p' : p , 'error': vorood ,  "sub" : sub , "ff" : mina})
+
+    else :
+        sub = False
+        return render_to_response('login.html', {'error': False , "sub" : sub})
+
