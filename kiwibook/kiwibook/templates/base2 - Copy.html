@@ -249,34 +249,30 @@ $('#cssmenu1 > ul > li > a').click(function() {
 <div id="site">
 <img src="http://www.8pic.ir/images/qiqtjv1urt745hx86gzd.jpg" alt="aa" align="middle" width="1800px" height="1600px"/>	
 	<div id="sitename" style="width:800px;height:200;position:absolute;top:70px;right:0px; left : 800px">
-	
-		
+	<font style="font-family:B Bardiya;font-size:140px;text-shadow: 0px 1px 0px #999,0px 3px 0px #777, 0px 5px 0px #555, 0px 7px 0px #333, 0px 8px 7px #001135;">          کراسه :)</font>
 	</div>
 <!--	<div id="arm" style="width:150px;height:150px;position:absolute;right:0px;top:35px;">
 	<img src="http://eswalls.com/wp-content/uploads/2013/12/cartoon-hd.jpg" alt="aaa" align="middle" width="130px" height="110px" />
 	</div>   -->
-	<div>
-	<img src="http://8pic.ir/images/lid67ey23137pd6x6px7.png" align="middle" width="380px" height="250px" style="position:absolute;right:50px;top:30px;"/>
 	
-	</div>
 	<div id="slideshow" >
 		<div>
-			<img src="https://www.royaltyexchange.com/wp-content/uploads/2014/06/education-books.jpg" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="https://www.royaltyexchange.com/wp-content/uploads/2014/06/education-books.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://cdn.yjc.ir/files/fa/news/1392/9/8/1790129_775.jpg" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://cdn.yjc.ir/files/fa/news/1392/9/8/1790129_775.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://marketingnews.ir/uploads/posts/2013-12/1386764159_21291.gif" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://marketingnews.ir/uploads/posts/2013-12/1386764159_21291.gif" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://www.pedrambook.com/image/cache/data/products_send/10000005277-500x500.jpg" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://www.pedrambook.com/image/cache/data/products_send/10000005277-500x500.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://www.360solutions.com/blog/wp-content/uploads/2012/07/books.jpg" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://www.360solutions.com/blog/wp-content/uploads/2012/07/books.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		<div>
-			<img src="http://www.mojdehbook.com/BookImages/120526_280x382.jpg" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
+			<img src="http://www.mojdehbook.com/BookImages/120526_280x382.jpg" align="middle" width="450px" height="270px" style="position:absolute;right:500px;top:0px;"/>
 		</div>
 		
 
@@ -288,10 +284,13 @@ $('#cssmenu1 > ul > li > a').click(function() {
 	<ul>
 	   <li><a href='http://127.0.0.1:8000/kerase/'><span>صفحه اصلی</span></a></li>
 	   
-	   <li><a href='#'><span>درباره ما</span></a></li>
+	   <li><a href='http://127.0.0.1:8000/login/'><span>جست و جو</span></a></li>
 	   
 	   <li class='last'><a href='#'><span>تماس با ما</span></a></li>
-	   
+	   <li class='last'><a href='http://127.0.0.1:8000/kerase/'><span>خروج از حساب کاربری</span></a></li>
+	   {%if not epassword%}
+			<p style="color: pink;font-family:Tahoma;font-size:15px;">  عزیز خوش اومدی    {{username}}</p>
+	   {%endif%}
 	</ul>
 	</div>
 
@@ -302,20 +301,20 @@ $('#cssmenu1 > ul > li > a').click(function() {
 <div id='cssmenu1'style=";width:200px;height:30px;position:absolute;right:10px;top:380px;">
 <ul>
 	
-    
-   
-    	
-	<li class='active'><a href='http://127.0.0.1:8000/sabtenam/'><span dir="rtl"><center> ثبت نام    </center></span></a></li>
-	<li class='active'><a href='http://127.0.0.1:8000/login/'><span dir="rtl"><center> ورود به سایت    </center></span></a></li>
-	
-
-	<li class='has-sub'><a href='#'><span dir="rtl"><center>انواع کتاب</center></span></a>
+    <li class='has-sub'><a href='#'><span dir="rtl"><center>انواع کتاب</center></span></a>
         <ul>
-			<li class='last'><a href='http://127.0.0.1:8000/list_manager/'><span dir="rtl"><center>دانشگاهی</center></span></a></li>
-			<li class='last'><a href='http://127.0.0.1:8000/list_person/'><span dir="rtl"><center>کودکانه</center></span></a></li>
-			<li class='last'><a href='http://127.0.0.1:8000/list_section/'><span dir="rtl"><center>فلسفی </center></span></a></li>
-        </ul>
+			<li class='active'><a href='#'><span dir="rtl"><center> دانشگاهی  </center></span></a></li>			
+			
+			<li class='active'><a href='#'><span dir="rtl"><center> ادبیات  </center></span></a></li>			
+			<li class='active'><a href='#'><span dir="rtl"><center> فلسفی  </center></span></a></li>			
+			<li class='active'><a href='#'><span dir="rtl"><center> کمک درسی  </center></span></a></li>			
+			<li class='active'><a href='#'><span dir="rtl"><center>  کودکان    </center></span></a></li>
+			 </ul>
     </li>
+   
+    
+	<li class='active'><a href='http://127.0.0.1:8000/aa/{{username}}'><span dir="rtl"><center> ویرایش مشخصات فردی </center></span></a></li>
+	<li class='active'><a href='#'><span dir="rtl"><center>  خرید کتاب    </center></span></a></li>
 	
 </ul>
 </div>

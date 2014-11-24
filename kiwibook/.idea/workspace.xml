@@ -36,7 +36,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="40" selection-start="4418" selection-end="4418" vertical-scroll-proportion="0.0">
+            <state line="145" column="40" selection-start="4577" selection-end="4577" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="28" column="46" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.8368644">
               <folding />
             </state>
           </provider>
@@ -178,11 +178,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -280,7 +280,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3066971" sideWeight="0.7968" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31202435" sideWeight="0.7968" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -356,6 +356,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -416,11 +423,6 @@
         <state line="118" column="95" selection-start="3022" selection-end="3022" vertical-scroll-proportion="0.5244755" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/templates/hello.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="46" selection-end="46" vertical-scroll-proportion="-1.3076923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="251" column="170" selection-start="6333" selection-end="6333" vertical-scroll-proportion="0.43589744" />
@@ -428,14 +430,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="40" selection-start="4418" selection-end="4418" vertical-scroll-proportion="0.0">
+        <state line="145" column="40" selection-start="4577" selection-end="4577" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="28" column="46" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.8368644">
           <folding />
         </state>
       </provider>

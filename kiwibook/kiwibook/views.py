@@ -38,7 +38,11 @@ from django.http import HttpResponse
 
 def kerase(request):
     mm=[["a","b","c"],["d" , "e" , "f"],["h" , "i" , "k"]]
-    return render_to_response('base1.html' )
+    #return render_to_response('main.html' )
+    #return render_to_response('test.html' )
+    return render_to_response('base.html' )
+
+
 
 
 
@@ -146,9 +150,9 @@ def login(request):
                 if new_user.password != password:
                     epassword = True
                 else :
-                    template=loader.get_template('base2.html')
+                    template=loader.get_template('base2.html' )
                     #template=loader.get_template('aa.html')
-                    context=RequestContext(request,{'epassword': epassword , 'username':username })
+                    context=RequestContext(request,{'epassword': epassword , 'username':username ,'username': username})
                     return HttpResponse(template.render(context))
                     #return render_to_response('base2.html' , {"username" : username})
                                
@@ -171,3 +175,36 @@ def login(request):
 def aa(request,username):
     mm=[["a","b","c"],["d" , "e" , "f"],["h" , "i" , "k"]]
     return render_to_response('aa.html', {'username': username})
+
+
+
+
+def book(request , username , group , page):
+    a=(int(page)-1) * 2
+    b = a+2
+    newpage = str(int(page)+1)
+    oldpage = str(int(page)-1)
+    error = False
+    empty = False
+    user = username
+    endlist = []
+    
+    if int(oldpage) == 0:
+        error = True
+    #book_list = Books.objects.all()[a:b]
+    book_list=Book.objects.filter(context__icontains=group )[a:b]
+    if str(book_list)== "[]":
+        empty = True
+    else:
+        endlist = []
+        for i in book_list:
+            mylist =[]
+            mylist.append(i.name)
+            mylist.append(i.publication)
+            mylist.append(i.price)
+            #mylist.append(i.school)
+            endlist.append(mylist)
+           
+    #gozar=s.sharh
+    return render_to_response('book_list.html', {'endlist' : endlist , 'empty': empty ,'error': error , 'book_list' : book_list, 'newpage' : newpage , 'oldpage': oldpage , 'group' : group , 'username' : username })
+

@@ -13,6 +13,7 @@ urlpatterns = patterns('',
 (r'^login/$', login),
 #(r'^aa/$', aa),
 (r'^aa/(?P<username>.+)/$', aa),
+(r'^book/(?P<username>.+)/(?P<group>.+)/(?P<page>.+)$', book),
 
 
 

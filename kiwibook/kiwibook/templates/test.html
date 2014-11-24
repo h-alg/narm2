@@ -1,11 +1,4 @@
 ﻿<html><head>
-
-
-
-<title>{% block title %}{% endblock %}</title>
-
-
-
 <meta http-equiv="Content-Language" content="en-us">
 <title><-BlogAndPostTitle-></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -118,16 +111,7 @@ background-repeat:no-repeat; background-position:center top;">
     <li><a href="http://127.0.0.1:8000/kerase/"><span>صفحه اصلی</span></a></li>
     <li><a href="http://127.0.0.1:8000/sabtenam"><span>ثبت نام</span></a></li>
     <li><a href="http://127.0.0.1:8000/login"><span>ورود به سایت</span></a></li>
-	
-    {%if not epassword%}
-			
-		<li><a ><span>{{username}}  عزیز خوش اومدی </span></a></li>
-
-		
-    {%endif%}
-
-
-
+    
     </ul>
 </div>
 
@@ -166,12 +150,12 @@ background-repeat:no-repeat; background-position:center top;">
 <div class="theme-designer"><div class="menu-title">لیست موضوعی کتاب ها</div></div>
 <div class="theme-designer2"><div class="t-d2-2"><div align="right">
 
-<div class="vmenu3"><a target="_blank" title="شامل کتب فنی و مهندسی و علوم پایه" href="http://127.0.0.1:8000/book/{{ username }}/uni/1" >دانشگاهی</a></div>
-<div class="vmenu3"><a target="_blank" title="رشته های ریاضی ، تجربی و انسانی" href="http://127.0.0.1:8000/book/{{ username }}/konkoor/1" >کنکور</a></div>
-<div class="vmenu3"><a target="_blank" title="کتب نویسندگان و ناشران سرشناس دینی" href="http://127.0.0.1:8000/book/{{ username }}/mazhabi/1" >مذهبی</a></div>
-<div class="vmenu3"><a target="_blank" title="شامل کتب داستان ، رنگ آمیزی و کتب آموزش کودکان" href="http://127.0.0.1:8000/book/{{ username }}/child/1" >کودکان</a></div>
-<div class="vmenu3"><a target="_blank" href="http://127.0.0.1:8000/book/{{ username }}/specter/1" >تخیلی</a></div>
-<div class="vmenu3"><a target="_blank" title="کتاب هایی که در هیچ یک از دسته ها نیستند" href="http://127.0.0.1:8000/book/{{ username }}/other/1" >سایر</a></div>
+<div class="vmenu3"><a target="_blank" title="شامل کتب فنی و مهندسی و علوم پایه" href="http://127.0.0.1:8000/book/uni/1" >دانشگاهی</a></div>
+<div class="vmenu3"><a target="_blank" title="رشته های ریاضی ، تجربی و انسانی" href="http://127.0.0.1:8000/book/konkoor" >کنکور</a></div>
+<div class="vmenu3"><a target="_blank" title="کتب نویسندگان و ناشران سرشناس دینی" href="http://127.0.0.1:8000/book/mazhabi" >مذهبی</a></div>
+<div class="vmenu3"><a target="_blank" title="شامل کتب داستان ، رنگ آمیزی و کتب آموزش کودکان" href="http://127.0.0.1:8000/book/child" >کودکان</a></div>
+<div class="vmenu3"><a target="_blank" href="http://127.0.0.1:8000/book/specter" >تخیلی</a></div>
+<div class="vmenu3"><a target="_blank" title="کتاب هایی که در هیچ یک از دسته ها نیستند" href="http://127.0.0.1:8000/book/mazhabi" >سایر</a></div>
 </div></div></div>
 <div class="theme-designer3"></div><div class="space3"></div>
 </BlogLinksBlock>
@@ -201,18 +185,14 @@ background-repeat:no-repeat; background-position:center top;">
 <td valign="top">
 
 <BLOGFA>
-<div class="post1"><div class="title-post"><div class="link-title-post"><a href="#">!!!!!!!تازه های کراسه</a>
+<div class="post1"><div class="title-post"><div class="link-title-post"><a href="new">!!!!!!!تازه های کراسه</a>
 			</div></div></div>
 
 <div class="post3">
 
 
 
-{% block content %}
 
-    aaaaaaa
-
-	{% endblock %}
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -313,15 +293,4 @@ href="http://www.theme-designer.com/help">.:: کلیک کنید ::.</a></center>
 </table>
 </div>
 
-
-
-
-
-
-
 </body></html>
-
-
-
-
-

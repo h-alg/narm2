@@ -249,12 +249,16 @@ $('#cssmenu1 > ul > li > a').click(function() {
 <div id="site">
 <img src="http://www.8pic.ir/images/qiqtjv1urt745hx86gzd.jpg" alt="aa" align="middle" width="1800px" height="1600px"/>	
 	<div id="sitename" style="width:800px;height:200;position:absolute;top:70px;right:0px; left : 800px">
-	<font style="font-family:B Bardiya;font-size:140px;text-shadow: 0px 1px 0px #999,0px 3px 0px #777, 0px 5px 0px #555, 0px 7px 0px #333, 0px 8px 7px #001135;">          کراسه :)</font>
+	
+		
 	</div>
 <!--	<div id="arm" style="width:150px;height:150px;position:absolute;right:0px;top:35px;">
 	<img src="http://eswalls.com/wp-content/uploads/2013/12/cartoon-hd.jpg" alt="aaa" align="middle" width="130px" height="110px" />
 	</div>   -->
+	<div>
+	<img src="http://8pic.ir/images/lid67ey23137pd6x6px7.png" align="middle" width="380px" height="250px" style="position:absolute;right:50px;top:30px;"/>
 	
+	</div>
 	<div id="slideshow" >
 		<div>
 			<img src="https://www.royaltyexchange.com/wp-content/uploads/2014/06/education-books.jpg" align="middle" width="350px" height="270px" style="position:absolute;right:500px;top:0px;"/>
@@ -284,7 +288,7 @@ $('#cssmenu1 > ul > li > a').click(function() {
 	<ul>
 	   <li><a href='http://127.0.0.1:8000/kerase/'><span>صفحه اصلی</span></a></li>
 	   
-	   <li class='last'><a href='#'><span>درباره ما</span></a></li>
+	   <li><a href='#'><span>درباره ما</span></a></li>
 	   
 	   <li class='last'><a href='#'><span>تماس با ما</span></a></li>
 	   
@@ -297,39 +301,34 @@ $('#cssmenu1 > ul > li > a').click(function() {
 
 <div id='cssmenu1'style=";width:200px;height:30px;position:absolute;right:10px;top:380px;">
 <ul>
-
-    <li class='active'><a href='http://127.0.0.1:8000/sabtenam/'><span dir="rtl"><center> ثبت نام  </center></span></a></li>
-    <li class='active'><a href='http://127.0.0.1:8000/login/'><span dir="rtl"><center>  ورود به سایت    </center></span></a></li>
 	
-	
-    <li class='has-sub'><a href='#'><span dir="rtl"><center>انواع کتاب</center></span></a>
-        <ul>
-			<li class='active'><a href='#'><span dir="rtl"><center> دانشگاهی  </center></span></a></li>			
-			
-			<li class='active'><a href='#'><span dir="rtl"><center> ادبیات  </center></span></a></li>			
-			<li class='active'><a href='#'><span dir="rtl"><center> فلسفی  </center></span></a></li>			
-			<li class='active'><a href='#'><span dir="rtl"><center> کمک درسی  </center></span></a></li>			
-			<li class='active'><a href='#'><span dir="rtl"><center>  کودکان    </center></span></a></li>
-			 </ul>
-    </li>
-   
     
+   
+    	
+	<li class='active'><a href='http://127.0.0.1:8000/sabtenam/'><span dir="rtl"><center> ثبت نام    </center></span></a></li>
+	<li class='active'><a href='http://127.0.0.1:8000/login/'><span dir="rtl"><center> ورود به سایت    </center></span></a></li>
+	
+
+	<li class='has-sub'><a href='#'><span dir="rtl"><center>انواع کتاب</center></span></a>
+        <ul>
+			<li class='last'><a href='http://127.0.0.1:8000/list_manager/'><span dir="rtl"><center>دانشگاهی</center></span></a></li>
+			<li class='last'><a href='http://127.0.0.1:8000/list_person/'><span dir="rtl"><center>کودکانه</center></span></a></li>
+			<li class='last'><a href='http://127.0.0.1:8000/list_section/'><span dir="rtl"><center>فلسفی </center></span></a></li>
+        </ul>
+    </li>
 	
 </ul>
 </div>
-		
-	
-	
 
+	
 	<div id="a" style="background-color:#282828 ;width:1050px;height:1200px;position:absolute;right:230px;top:380px;">
-			
-		{% block content1 %}
+	{% block content %}
 
-	{% endblock %}	
+	{% endblock %}
 	</div>
 	
 	
 
 </div>
 
-
+ 
