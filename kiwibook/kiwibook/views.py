@@ -192,7 +192,9 @@ def book(request , username , group , page):
     if int(oldpage) == 0:
         error = True
     #book_list = Books.objects.all()[a:b]
-    book_list=Book.objects.filter(context__icontains=group )[a:b]
+    book_list=Book.objects.filter(field__icontains=group )[a:b]
+    #book_list=Book.objects.filter(context__icontains=group )[a:b]
+
     if str(book_list)== "[]":
         empty = True
     else:
@@ -200,7 +202,7 @@ def book(request , username , group , page):
         for i in book_list:
             mylist =[]
             mylist.append(i.name)
-            mylist.append(i.publication)
+            #mylist.append(i.publication)
             mylist.append(i.price)
             #mylist.append(i.school)
             endlist.append(mylist)
@@ -208,3 +210,43 @@ def book(request , username , group , page):
     #gozar=s.sharh
     return render_to_response('book_list.html', {'endlist' : endlist , 'empty': empty ,'error': error , 'book_list' : book_list, 'newpage' : newpage , 'oldpage': oldpage , 'group' : group , 'username' : username })
 
+def proffer(request , username):
+    new_user = Users.objects.get(username__icontains=username)
+   # flist = new_user.favorite
+    flist = ["UN" , "AR"]
+
+
+    
+    #too alaghe manD hash daste haye ketaba hast
+    #begam az ketabaye oon daste do taye bartar ro BRe
+
+    
+    proffer_list=[]
+    for f in flist :
+        newlist = Book.objects.filter(field__icontains= f)
+        ratelist=[]
+        for onsor in newlist:
+            ratelist.append( onsor.rate)
+        max_rate = max (ratelist)
+        for i in range(len(ratelist )):
+            if ratelist[i] == max(ratelist):
+                proffer_list.append(newlist[i])
+
+    #profferlist shamele behtarin ketab az har daste E ke karbar e mazkoor gozashte too alaghe hash
+    
+
+
+    #return render_to_response('proffer.html', {'flist' : flist  , 'username' : username })
+    return render_to_response('proffer.html', {'proffer_list' : proffer_list  , 'username' : username })    
+
+    
+def inf_book(request , id_book):
+    new_book = Book.objects.get(id_book__icontains=id_book)
+    book_name = new_book.name
+    book_price = new_book.price
+    book_field = new_book.field
+
+
+    return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_field' : book_field})    
+    
+    

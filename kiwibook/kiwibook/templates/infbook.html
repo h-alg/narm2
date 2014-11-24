@@ -167,11 +167,12 @@ background-repeat:no-repeat; background-position:center top;">
 <div class="theme-designer"><div class="menu-title">لیست موضوعی کتاب ها</div></div>
 <div class="theme-designer2"><div class="t-d2-2"><div align="right">
 
-<div class="vmenu3"><a target="_blank" title="شامل کتب فنی و مهندسی و علوم پایه" href="http://127.0.0.1:8000/book/{{ username }}/UN/1" >دانشگاهی</a></div>
-<div class="vmenu3"><a target="_blank" title="کتب دانشگاهی هنر و مطالعه آزاد" href="http://127.0.0.1:8000/book/{{ username }}/AR/1" >هنری</a></div>
-<div class="vmenu3"><a target="_blank" title="بهترین کتب علمی دنیا :دی" href="http://127.0.0.1:8000/book/{{ username }}/SC/1" >علمی</a></div>
-<div class="vmenu3"><a target="_blank" title="شامل کتب داستان ، رنگ آمیزی و کتب آموزش کودکان" href="http://127.0.0.1:8000/book/{{ username }}/KD/1" >کودکان</a></div>
-
+<div class="vmenu3"><a target="_blank" title="شامل کتب فنی و مهندسی و علوم پایه" href="http://127.0.0.1:8000/book/{{ username }}/uni/1" >دانشگاهی</a></div>
+<div class="vmenu3"><a target="_blank" title="رشته های ریاضی ، تجربی و انسانی" href="http://127.0.0.1:8000/book/{{ username }}/konkoor/1" >کنکور</a></div>
+<div class="vmenu3"><a target="_blank" title="کتب نویسندگان و ناشران سرشناس دینی" href="http://127.0.0.1:8000/book/{{ username }}/mazhabi/1" >مذهبی</a></div>
+<div class="vmenu3"><a target="_blank" title="شامل کتب داستان ، رنگ آمیزی و کتب آموزش کودکان" href="http://127.0.0.1:8000/book/{{ username }}/child/1" >کودکان</a></div>
+<div class="vmenu3"><a target="_blank" href="http://127.0.0.1:8000/book/{{ username }}/specter/1" >تخیلی</a></div>
+<div class="vmenu3"><a target="_blank" title="کتاب هایی که در هیچ یک از دسته ها نیستند" href="http://127.0.0.1:8000/book/{{ username }}/other/1" >سایر</a></div>
 </div></div></div>
 <div class="theme-designer3"></div><div class="space3"></div>
 </BlogLinksBlock>
@@ -211,6 +212,11 @@ background-repeat:no-repeat; background-position:center top;">
 {% block content %}
 
     aaaaaaa
+name of book : {{book_name}}
+<br>
+field of book : {{book_field}}
+<br>
+price of bood : {{book_price}}
 
 	{% endblock %}
 
