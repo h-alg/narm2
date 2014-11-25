@@ -74,12 +74,12 @@ $(document).ready(function(e){
 	});
 });
 */pishnahad*/
-$(document).ready(function() {
-    $('#Carousel').carousel({
-        interval: 5000
+$(document).ready(function(ev){
+    $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+      $('#custom_carousel .controls li.active').removeClass('active');
+      $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
     })
 });
-
 
 
 
