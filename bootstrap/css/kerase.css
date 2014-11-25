@@ -1,0 +1,160 @@
+.prettyline {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #0000FF, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #0000FF, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left,#0000FF, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right,#0000FF, #0000FF 12.5%,#0000FF 12.5%, #0000FF 25%,#0000FF 25%,#0000FF 37.5%,#0000FF 37.5%, #0000FF 50%, #0000FF 50%,#0000FF 62.5%,#0000FF 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+*/ Color line credit to ninjamonk: [[http://bootsnipp.com/snippets/featured/mix-amp-match-login]]*/
+
+*/search*/
+body{
+    margin-top:25px;
+}
+*/nav*/
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn{
+    margin: 2px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+.btn-xs{
+    font-weight: 150;
+}
+
+.btn-hot {
+color: #fff;
+background-color: #db5566;
+border-bottom:2px solid #af4451;
+}
+
+.btn-hot:hover, .btn-sky.active:focus, .btn-hot:focus, .open>.dropdown-toggle.btn-hot {
+color: #fff;
+background-color: #df6a78;
+border-bottom:2px solid #b25560;
+outline: none;}
+
+
+.btn-hot:active, .btn-hot.active {
+color: #fff;
+background-color: #c04b59;
+border-top:2px solid #9a3c47;
+margin-top: 2px;
+}
+
+.btn-sunny {
+color: #fff;
+background-color: #f4ad49;
+border-bottom:2px solid #c38a3a;
+}
+
+.btn-sunny:hover, .btn-sky.active:focus, .btn-sunny:focus, .open>.dropdown-toggle.btn-sunny {
+color: #fff;
+background-color: #f5b75f;
+border-bottom:2px solid #c4924c;
+outline: none;
+}
+
+
+.btn-sunny:active, .btn-sunny.active {
+color: #fff;
+background-color: #d69840;
+border-top:2px solid #ab7a33;
+margin-top: 2px;
+}
+
+.btn-fresh {
+color: #fff;
+background-color: #51bf87;
+border-bottom:2px solid #41996c;
+}
+
+.btn-fresh:hover, .btn-sky.active:focus, .btn-fresh:focus, .open>.dropdown-toggle.btn-fresh {
+color: #fff;
+background-color: #66c796;
+border-bottom:2px solid #529f78;
+outline: none;
+}
+
+
+.btn-fresh:active, .btn-fresh.active {
+color: #fff;
+background-color: #47a877;
+border-top:2px solid #39865f;
+outline: none;
+outline-offset: none;
+margin-top: 2px;
+}
+
+.btn-sky {
+color: #fff;
+background-color: #0bacd3;
+border-bottom:2px solid #098aa9;
+}
+
+.btn-sky:hover,.btn-sky.active:focus, .btn-sky:focus, .open>.dropdown-toggle.btn-sky {
+color: #fff;
+background-color: #29b6d8;
+border-bottom:2px solid #2192ad;
+outline: none;
+}
+
+.btn-sky:active, .btn-sky.active {
+color: #fff;
+background-color: #0a97b9;
+border-top:2px solid #087994;
+outline-offset: none;
+margin-top: 2px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: none;
+    outline-offset: 0px;
+}
+
+
+/*
+پیشنهاد کتاب*/
+body{padding-top:20px;}
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+/* The controlsy */
+.carousel-control {
+	left: -12px;
+    height: 40px;
+	width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+.carousel-control.right {
+	right: -12px;
+}
+/* The indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: -10px;
+	margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+	background: #cecece;
+}
+.carousel-indicators .active {
+background: #428bca;
+}
