@@ -1,10 +1,11 @@
+
 from django.db import models
+from django.forms import ModelForm
+
 
 # Create your models here.
 class Users(models.Model):
-    name = models.CharField(max_length=100)
-    family = models.CharField(max_length=100)
-    username = models.CharField(max_length=100)
+    username = models.CharField(primary_key=True ,max_length=100)
     password = models.CharField(max_length=100)
     email = models.EmailField(max_length=254)
     birthday_date = models.DateField(auto_now_add=True)
@@ -17,18 +18,30 @@ class Users(models.Model):
         return self.username
 
 class Book(models.Model):
-    id_book = models.IntegerField()
+
+    UNIVERSITY = 'UN'
+    ART = 'AR'
+    SCIENCE = 'SC'
+    KIDS= 'KD'
+    BOOK_FIELD_CHOICES = (
+        (UNIVERSITY, 'University'),
+        (ART, 'Art'),
+        (SCIENCE, 'Science'),
+        (KIDS, 'Kids'),
+    )
+
+    id_book = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=100)
-    # picture_book = models.ImageField(upload_to= None , height_field = None , width_field = None , max_length = 100)
-    authors = ['-fdw']
-    publish_date = models.DateField(auto_now_add=True)
-    price = models.IntegerField()
-    publication = models.CharField(max_length=100)
-    school = models.CharField(max_length=100)
-    major = models.CharField(max_length=100)
-    context = models.CharField(max_length=100)
-    sell_public = models.IntegerField()
-    sell_users = models.IntegerField()
+    #image=models.ImageField()
+    author= models.CharField(max_length=100)
+    edition = models.IntegerField(default=1)
+    field=models.CharField(max_length=100,choices=BOOK_FIELD_CHOICES,default=ART)
+    price = models.IntegerField(default=0)
+    rate=models.IntegerField(default=0)
+
+
+
 
     def __unicode__(self):
-        return self.id_book
+        return '%s' % self.id_book
+
