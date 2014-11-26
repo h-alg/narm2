@@ -20,7 +20,7 @@
     
  <style>
 body {
-    background-color: 	#C0C0C0;
+    background-color: 	#f8ffff;
 }
 </style>
 <div class="container">
@@ -34,9 +34,32 @@ body {
 </div>
 
        				<img src="img/kerase.png" border="0" alt="logo" style="  position: absolute; right:450px; top:25px ;">
+            <script type="text/javascript">
+
+function GetClock(){
+d = new Date();
+nday   = d.getDay();
+nmonth = d.getMonth();
+ndate  = d.getDate();
+nyear = d.getYear();
+nhour  = d.getHours();
+nmin   = d.getMinutes();
+if(nyear<1000) nyear=nyear+1900;
+
+if(nmin <= 9){nmin="0"+nmin}
+
+
+document.getElementById('clockbox').innerHTML=""+(nmonth+1)+"/"+ndate+"/"+nyear+" "+nhour+":"+nmin+"";
+setTimeout("GetClock()", 1000);
+}
+window.onload=GetClock;
+</script>
+<div id="clockbox" style="font:normal 11px verdana; color:#333;position: relative;top:150px;left: 120px;"></div>
+
 <div class="col-md-4 column">
 
            <span id="LblUserName" style="position: relative;left:90px; top:80px;text-shadow: 2px 2px 8px #FF0000;color:Black;font-family:tahoma;font-size:10pt;"> کاربر مهمان خوش آمدید </span>
+
 </div>
 		</div>
 
@@ -175,16 +198,21 @@ overflow: hidden;left: -15px;">
 				<div class="col-md-4 column">
 <div class="panel panel-primary">
                 <div class="panel-heading">
-                     <h3 class="panel-title" style="font-family:tahoma;font-size:10pt;"><center>لیست کتاب</center></h3>
+                     <h3 class="panel-title" style="font-family:tahoma;font-size:10pt;"><center>لیست عنوان کتاب</center></h3>
                 </div>
                 <ul class="list-group">
-                    <a href="#" class="list-group-item" style="font-family:tahoma;position: relative;";font-size:10pt;"><center>دانشگاهی</center></a>
+                    <a href="#" class="list-group-item";><h3 style="font-family:tahoma;position: relative;left: 50px;font-size:12pt;top: 30px;"><center>دانشگاهی</center></h3><img src="img/23.jpg" border="0" style="position: relative;top: -30px;" ></a>
                    <!-- <a href="http://www.jquery2dotnet.com/2014/01/jquery-export-table-data-into-ms-excel.html" class="list-group-item active">Dapibus ac facilisis in</a>-->
-                    <a href="#" class="list-group-item" style="font-family:tahoma;font-size:10pt;"><center>مذهبی</center></a>
-                    <a href="#" class="list-group-item" style="font-family:tahoma;font-size:10pt;"><center>کودک</center></a>
-                    <a href="#" class="list-group-item" style="font-family:tahoma;font-size:10pt;"><center>Vestibulum at eros</center></a>
+                    <a href="#" class="list-group-item";><h3 style="font-family:tahoma;position: relative;left: 50px;font-size:12pt;top: 30px;"><center>مذهبی</center></h3><img src="img/17.jpg" border="0"style=" position:relative;top: -30px;" ></a>
+
+                    <a href="#" class="list-group-item";><h3 style="font-family:tahoma;position: relative;left: 50px;font-size:12pt;top: 30px;"><center>کودک</center></h3><img src="img/19.jpg" border="0"style=" position:relative;top: -30px;" ></a>
+                   <a href="#" class="list-group-item";><h3 style="font-family:tahoma;position: relative;left: 50px;font-size:12pt;top: 30px;"><center>روانشناسی</center></h3><img src="img/18.jpg" border="0" style=" position:relative;top: -30px; "></a>
+                  <!--  <a href="#" class="list-group-item" style="font-family:tahoma;font-size:10pt;"><center>آموزشی</center><img src="img/22.jpg" border="0" alt="logo" ></a></a>-->
+
                 </ul>
+
             </div>
+
 				</div>
 			</div>
 		</div>
@@ -195,7 +223,7 @@ overflow: hidden;left: -15px;">
 </div>
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-            <img src="img/20.png" border="0" alt="logo">
+            <span style="font-family:tahoma;font-size:10pt;color: #666666;position: relative;left: 400px;top: -20px;" </span>کلیه حقوق مادی و معنوی نزد وب سایت فروش کتاب کراسه محفوظ میباشد
 		</div>
 
 
