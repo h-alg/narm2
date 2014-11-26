@@ -82,20 +82,7 @@
 
 		{%endif%}
 	</div>
-	<div>
 	
-		{%if ename%}
-			<p style="color:red;font-family:Tahoma;font-size:20px;"> نام  باید بین 4 تا 8 کاراکتر باشد </p>
-
-		{%endif%}
-	</div>
-	<div>
-	
-		{%if efamily%}
-			<p style="color:red;font-family:Tahoma;font-size:20px;"> نام خانوادگی باید بین 4 تا 8 کاراکتر باشد </p>
-
-		{%endif%}
-	</div>
 	<div>
 	
 		{%if eaddress%}
@@ -129,11 +116,11 @@
 
 <form action="/sabtenam/" method="get">
 <p style="font-family:Tahoma;font-size:20px;">نام کاربری</p><input type = "text" name="username" id="username">
-<p style="font-family:Tahoma;font-size:20px;">نام </p><input type = "text" name="name" id="name">
-<p style="font-family:Tahoma;font-size:20px;">نام خانوادگی</p><input type = "text" name="family" id="family">
+
 <p style="font-family:Tahoma;font-size:20px;">کلمه عبور</p><input type = "text" name="password" id="password">
 <p style="font-family:Tahoma;font-size:20px;">پست الکترونیک</p><input type="text" name="email" id="email">
 <p style="font-family:Tahoma;font-size:20px;">آدرس جهت ارسال سفارشات</p><input type="text" name="address" id="address">
+<br>
 <input type="submit" name="submit" value="ثبت">
 </form>
 {% endblock %} 

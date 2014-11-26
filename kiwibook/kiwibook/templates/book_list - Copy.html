@@ -1,0 +1,116 @@
+﻿
+{% extends "base2.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+
+
+
+
+
+{% if not empty %}
+    {{book_list}}
+ {% endif %}
+{% if  empty %}
+    دیگه از این کتابا نداریم :(
+{% endif %}
+<br>{{username}}        name karbari :)
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div id="namk" style="background-color:#E0EBEB;width:500px;height:150px;position:absolute;right:430px;top:320px;">
+		<div dir="rtl" id="nam" ><center><p><center>
+			<font face="bnazanin" style="font-size: 20pt" color = "black"  > {{endlist}}zzzzzzzzzz  </font> </p></center></div>
+
+
+
+
+<div id="table" style="position:absolute;top : 50px ;left:100px;height:465px;width:900px"">
+        		<table id="t1">
+					
+					
+					<tr bgcolor="#3399FF">
+					  <th><p style="font-size : 20pt  ; color : black"> شماره پرسنلی دارنده </p>  </th>
+					  <th><p style="font-size : 20pt  ; color : black"> نوع وسیله </p> </th>
+					  <th><p style="font-size : 20pt  ; color : black"> کد رهگیری </p> </th>
+					  
+					</tr>
+					<tr>
+					{%for m in endlist%}
+						<tr bgcolor="#3399FF">{%for x in m%}
+							<td bgcolor="#94B8B8"><p style="font-size : 20pt  ; color : black"> {{x}} </p> </th>
+						{%endfor%}</tr>
+						
+					{%endfor%}
+					</tr>
+		
+	
+	</div>
+
+
+
+
+
+
+
+</div>
+
+<div id="namk" style="background-color:#E0EBEB;width:500px;height:150px;position:absolute;right:430px;top:480px;">
+		<div dir="rtl" id="nam" ><center><p><center>
+			<font face="bnazanin" style="font-size: 20pt" color = "black"  > {{m}}  </font> </p></center></div>
+</div>
+
+{% if not empty %}
+<div id="namk" style="background-color:#FFFFFF;width:160px;height:30px;position:absolute;right:490px;top:640px;">
+		<div dir="rtl" id="nam" ><a href="http://127.0.0.1:8000/book/{{ username }}/uni/{{newpage}}"><center>
+			<font face="Dast Nevis" style="font-size: 20pt" color = "blue"  > صفحه بعد  </font> </a>
+			
+			
+			</div>
+</div>
+{%endif%}
+{%if not error%}
+<div id="namk" style="background-color:#FFFFFF;width:160px;height:30px;position:absolute;right:690px;top:640px;">
+		<div dir="rtl" id="nam" ><a href="http://127.0.0.1:8000/book/{{ username }}/uni/{{oldpage}}"><center>
+			<font face="Dast Nevis" style="font-size: 20pt" color = "blue"  > صفحه قبل  </font> </a>
+			
+			
+			</div>
+</div>
+{%endif%}
+
+
+
+
+
+{%for m in endlist%}
+
+
+
+	{%for mm in m%}
+		onsoresh is {{mm}}
+
+	{%endfor%}
+	<br>
+{%endfor%}
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+{% endblock %} 
+
+

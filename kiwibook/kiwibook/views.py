@@ -39,7 +39,7 @@ from django.http import HttpResponse
 def kerase(request):
     mm=[["a","b","c"],["d" , "e" , "f"],["h" , "i" , "k"]]
     #return render_to_response('main.html' )
-    #return render_to_response('test.html' )
+    #return render_to_response('fff.html' )
     return render_to_response('base.html' )
 
 
@@ -57,8 +57,8 @@ def sabtenam(request):
 
 
         username = request.GET['username']
-        name = request.GET['name']
-        family = request.GET['family']
+        #name = request.GET['name']
+        #family = request.GET['family']
         password = request.GET['password']
         email = request.GET['email']
         #birthday = request.GET['birthday']
@@ -68,14 +68,16 @@ def sabtenam(request):
 
 
         sub = True
-        if not (username or name or family or password or email or address):
+        #if not (username or name or family or password or email or address):
+        if not (username or password or email or address):
+
         #if (not f) and (not p)  and (not e):
             vorood = False
 
         else :
             eusername = False
-            ename= False
-            efamily= False
+            #ename= False
+            #efamily= False
             epassword= False
             eemail= False
             eaddress = False
@@ -89,10 +91,10 @@ def sabtenam(request):
                 tekrari = False
                 if len(str(username)) > 15 or len(str(username)) < 4:
                     eusername = True
-                elif len (str(name)) > 10 or len(str(name)) < 3 :
-                    ename = True
-                elif len (str(family)) > 30 or len(str(family)) < 3 :
-                    efamily = True
+                #elif len (str(name)) > 10 or len(str(name)) < 3 :
+                    #ename = True
+                #elif len (str(family)) > 30 or len(str(family)) < 3 :
+                    #efamily = True
                 elif len (str(password)) > 15 or len(str(password)) < 4 :
                     epassword = True
                 #elif len (str(address)) > 15 or len(str(name)) < 3 :
@@ -103,13 +105,17 @@ def sabtenam(request):
                 elif not(((str(email).find("@") < str(email).find(".") ) and (str(email).find("@")!= -1 ))):
                     eemail = True
                 else:
-                    new_user=Users(name=name,password= password , email = email , username= username , adress = address , family = family , hesab = 0)
+                    #new_user=Users(name=name,password= password , email = email , username= username , adress = address , family = family , hesab = 0)
+                    new_user=Users(password= password , email = email , username= username , adress = address , hesab = 0)
+
                     new_user.save()
             else :
                 tekrari = True
                 #ezafe kardan be db
 
-        return render_to_response('sabtenam.html', {'efamily': efamily ,'eaddress': eaddress,'eemail': eemail ,'epassword': epassword ,'eusername' : eusername , 'ename' : ename , 'username' : username , 'password' :password , 'email' : email , 'error': vorood , "tekrari" : tekrari , "sub" : sub})
+#        return render_to_response('sabtenam.html', {'efamily': efamily ,'eaddress': eaddress,'eemail': eemail ,'epassword': epassword ,'eusername' : eusername , 'ename' : ename , 'username' : username , 'password' :password , 'email' : email , 'error': vorood , "tekrari" : tekrari , "sub" : sub})
+        return render_to_response('sabtenam.html', {'eaddress': eaddress,'eemail': eemail ,'epassword': epassword ,'eusername' : eusername  , 'username' : username , 'password' :password , 'email' : email , 'error': vorood , "tekrari" : tekrari , "sub" : sub})
+    
 
     else :
         sub = False
@@ -180,8 +186,8 @@ def aa(request,username):
 
 
 def book(request , username , group , page):
-    a=(int(page)-1) * 2
-    b = a+2
+    a=(int(page)-1) * 3
+    b = a+3
     newpage = str(int(page)+1)
     oldpage = str(int(page)-1)
     error = False
@@ -201,10 +207,11 @@ def book(request , username , group , page):
         endlist = []
         for i in book_list:
             mylist =[]
+            mylist.append(i.id_book)
             mylist.append(i.name)
-            #mylist.append(i.publication)
+            mylist.append(i.author)
             mylist.append(i.price)
-            #mylist.append(i.school)
+            
             endlist.append(mylist)
            
     #gozar=s.sharh
