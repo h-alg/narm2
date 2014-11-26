@@ -250,3 +250,4 @@ def inf_book(request , id_book):
     return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_field' : book_field})    
     
     
+        
