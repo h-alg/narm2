@@ -7,12 +7,17 @@
 
 
 
-{% if not empty %}
-    {{book_list}}
- {% endif %}
-{% if  empty %}
-    دیگه از این کتابا نداریم :(
-{% endif %}
+
+
+
+
+
+
+
+
+
+
+
 <br>{{username}}        name karbari :)
 
 
@@ -24,19 +29,46 @@
 
 
 
-<div id="namk" style="background-color:#E0EBEB;width:500px;height:150px;position:absolute;right:430px;top:320px;">
-		<div dir="rtl" id="nam" ><center><p><center>
-			<font face="bnazanin" style="font-size: 20pt" color = "black"  > {{m}}  </font> </p></center></div>
-</div>
 
-<div id="namk" style="background-color:#E0EBEB;width:500px;height:150px;position:absolute;right:430px;top:480px;">
-		<div dir="rtl" id="nam" ><center><p><center>
-			<font face="bnazanin" style="font-size: 20pt" color = "black"  > {{m}}  </font> </p></center></div>
-</div>
+
+{% if not empty%}
+
+	<div id="table" style="position:absolute;top : 30px ;left:350px;height:465px;width:590px"">
+        		<table id="t1">
+					
+					
+					<tr bgcolor="#3399FF">
+					  <th><p style="font-size : 15pt  ; color : black">__آیدی __</p> </th>
+					  <th><p style="font-size : 15pt  ; color : black">__نام کتاب__ </p>  </th>
+					  <th><p style="font-size : 15pt  ; color : black"> __نام انتشارات__</p> </th>
+					  <th><p style="font-size : 15pt  ; color : black"> __قیمت__ </p> </th>
+					  
+					  
+					</tr>
+					<tr>
+					{%for m in endlist%}
+						<tr bgcolor="#3399FF">{%for x in m%}
+							<td bgcolor="#94B8B8"><a href="http://127.0.0.1:8000/infbook/{{x}}"><center><p  style="font-size : 15pt  ; color : black"> {{x}} </p> </th></a>
+						{%endfor%}</tr>
+						
+					{%endfor%}
+					</tr>
+		
+	
+	</div>
+
+
+
+
+
+
+
+
+{%endif%}
 
 {% if not empty %}
-<div id="namk" style="background-color:#FFFFFF;width:160px;height:30px;position:absolute;right:490px;top:640px;">
-		<div dir="rtl" id="nam" ><a href="http://127.0.0.1:8000/book/{{ username }}/uni/{{newpage}}"><center>
+<div id="namk" style="background-color:#FFFFFF;width:160px;height:30px;position:absolute;right:300px;top:480px;">
+		<div dir="rtl" id="nam" ><a href="http://127.0.0.1:8000/book/{{ username }}/{{group}}/{{newpage}}"><center>
 			<font face="Dast Nevis" style="font-size: 20pt" color = "blue"  > صفحه بعد  </font> </a>
 			
 			
@@ -44,8 +76,8 @@
 </div>
 {%endif%}
 {%if not error%}
-<div id="namk" style="background-color:#FFFFFF;width:160px;height:30px;position:absolute;right:690px;top:640px;">
-		<div dir="rtl" id="nam" ><a href="http://127.0.0.1:8000/book/{{ username }}/uni/{{oldpage}}"><center>
+<div id="namk" style="background-color:#FFFFFF;width:160px;height:30px;position:absolute;right:100px;top:480px;">
+		<div dir="rtl" id="nam" ><a href="http://127.0.0.1:8000/book/{{ username }}/{{group}}/{{oldpage}}"><center>
 			<font face="Dast Nevis" style="font-size: 20pt" color = "blue"  > صفحه قبل  </font> </a>
 			
 			
@@ -57,16 +89,6 @@
 
 
 
-{%for m in endlist%}
-
-
-
-	{%for mm in m%}
-		onsoresh is {{mm}}
-
-	{%endfor%}
-	<br>
-{%endfor%}
 
 
 

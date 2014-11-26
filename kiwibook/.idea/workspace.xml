@@ -4,8 +4,8 @@
     <list default="true" id="44b5be07-5d99-47da-9312-5e72edbe27e0" name="Default" comment="" />
     <ignored path="kiwibook.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/urls.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416240306514" ignored="false" />
-    <file path="/views.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416236852752" ignored="false" />
+    <file path="/urls.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417020134988" ignored="false" />
+    <file path="/views.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417025981347" ignored="false" />
     <file path="/hello.html" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1415186229820" ignored="false" />
     <file path="/base.html" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416243858597" ignored="false" />
     <file path="/models.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416845924581" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/test.html" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416152913807" ignored="false" />
     <file path="/book_list.html" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416240469792" ignored="false" />
     <file path="/base2.html" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1416324957679" ignored="false" />
-    <file path="$PROJECT_DIR$/kiwibook/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417016605626" ignored="false" />
+    <file path="$PROJECT_DIR$/kiwibook/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417025233597" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="0" selection-start="8480" selection-end="8480" vertical-scroll-proportion="0.0">
+            <state line="218" column="0" selection-start="7661" selection-end="7661" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,7 +52,7 @@
       <file leaf-file-name="book_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/templates/book_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="17" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -61,7 +61,7 @@
       <file leaf-file-name="base2.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/templates/base2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="141" selection-start="6460" selection-end="6460" vertical-scroll-proportion="0.0">
+            <state line="172" column="141" selection-start="6414" selection-end="6414" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,7 @@
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +79,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+            <state line="11" column="67" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,10 +88,8 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="50" selection-start="911" selection-end="911" vertical-scroll-proportion="1.1826087">
-              <folding>
-                <element signature="e#1#29#0" expanded="true" />
-              </folding>
+            <state line="35" column="10" selection-start="992" selection-end="998" vertical-scroll-proportion="0.6673913">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,12 +113,12 @@
         <option value="$PROJECT_DIR$/kiwibook/malihe/templates/main.html" />
         <option value="$PROJECT_DIR$/kiwibook/templates/main.html" />
         <option value="$PROJECT_DIR$/kiwibook/templates/test.html" />
-        <option value="$PROJECT_DIR$/kiwibook/views.py" />
-        <option value="$PROJECT_DIR$/kiwibook/urls.py" />
         <option value="$PROJECT_DIR$/kiwibook/templates/base.html" />
         <option value="$PROJECT_DIR$/kiwibook/templates/book_list.html" />
         <option value="$PROJECT_DIR$/kiwibook/templates/base2.html" />
         <option value="$PROJECT_DIR$/mydatabase/models.py" />
+        <option value="$PROJECT_DIR$/kiwibook/urls.py" />
+        <option value="$PROJECT_DIR$/kiwibook/views.py" />
       </list>
     </option>
   </component>
@@ -156,6 +154,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,7 +165,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,7 +292,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41628614" sideWeight="0.7984" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42998478" sideWeight="0.7984" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -380,9 +378,7 @@
     <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -421,52 +417,50 @@
         <state line="188" column="30" selection-start="7459" selection-end="7459" vertical-scroll-proportion="0.64827585" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="25" selection-start="365" selection-end="365" vertical-scroll-proportion="0.5403423" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/kiwibook/templates/book_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="0" selection-start="8480" selection-end="8480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/templates/book_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="17" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/templates/base2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="141" selection-start="6460" selection-end="6460" vertical-scroll-proportion="0.0">
+        <state line="172" column="141" selection-start="6414" selection-end="6414" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kiwibook/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kiwibook/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="67" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="0" selection-start="7661" selection-end="7661" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="50" selection-start="911" selection-end="911" vertical-scroll-proportion="1.1826087">
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
+        <state line="35" column="10" selection-start="992" selection-end="998" vertical-scroll-proportion="0.6673913">
+          <folding />
         </state>
       </provider>
     </entry>

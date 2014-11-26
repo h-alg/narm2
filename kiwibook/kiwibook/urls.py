@@ -7,6 +7,12 @@ admin.autodiscover()
 from django.conf.urls.defaults import * 
 from kiwibook.views import *
 
+
+#####test zeinaaaaaaaaaaab
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
+
 urlpatterns = patterns('', 
 (r'^kerase/$', kerase),
 (r'^sabtenam/$', sabtenam),
