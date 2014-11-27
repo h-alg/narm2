@@ -220,14 +220,9 @@ def book(request , username , group , page):
 def proffer(request , username):
     new_user = Users.objects.get(username__icontains=username)
    # flist = new_user.favorite
-    flist = ["UN" , "AR"]
-
-
-    
+    flist = ["UN" , "KD"]
     #too alaghe manD hash daste haye ketaba hast
     #begam az ketabaye oon daste do taye bartar ro BRe
-
-    
     proffer_list=[]
     for f in flist :
         newlist = Book.objects.filter(field__icontains= f)
@@ -239,22 +234,32 @@ def proffer(request , username):
             if ratelist[i] == max(ratelist):
                 proffer_list.append(newlist[i])
 
+        endlist = []
+        for i in proffer_list:
+            mylist =[]
+            mylist.append(i.id_book)
+            mylist.append(i.name)
+            mylist.append(i.author)
+            mylist.append(i.price)
+            
+            endlist.append(mylist)
+
     #profferlist shamele behtarin ketab az har daste E ke karbar e mazkoor gozashte too alaghe hash
     
 
 
     #return render_to_response('proffer.html', {'flist' : flist  , 'username' : username })
-    return render_to_response('proffer.html', {'proffer_list' : proffer_list  , 'username' : username })    
+    return render_to_response('proffer.html', {'endlist':endlist , 'proffer_list' : proffer_list  , 'username' : username })    
 
     
 def inf_book(request , id_book):
     new_book = Book.objects.get(id_book__icontains=id_book)
     book_name = new_book.name
     book_price = new_book.price
-    book_field = new_book.field
+    book_author = new_book.author
 
 
-    return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_field' : book_field})    
+    return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_author' : book_author})    
     
     
         
