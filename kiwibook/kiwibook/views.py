@@ -39,7 +39,7 @@ from django.http import HttpResponse
 def kerase(request):
     mm=[["a","b","c"],["d" , "e" , "f"],["h" , "i" , "k"]]
     #return render_to_response('main.html' )
-    #return render_to_response('fff.html' )
+    #return render_to_response('kerase.html' )
     return render_to_response('base.html' )
 
 
