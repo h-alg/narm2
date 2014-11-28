@@ -24,7 +24,7 @@ urlpatterns = patterns('',
 (r'^infbook/(?P<id_book>.+)$', inf_book),
 
 ###pegah
-(r'^search/(?P<username>.+)/$', search),                       
+(r'^search/$', search),                       
 
 
 

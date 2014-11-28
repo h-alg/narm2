@@ -2,7 +2,7 @@
 
 
 
-<title>{% block title %}پیشنهاد ویژه کراسه{% endblock %}</title>
+<title>{% block title %}{% endblock %}</title>
 
 
 
@@ -117,7 +117,8 @@ background-repeat:no-repeat; background-position:center top;">
   <ul>
     <li><a href="http://127.0.0.1:8000/kerase/"><span>صفحه اصلی</span></a></li>
     <li><a href="http://127.0.0.1:8000/sabtenam"><span>ثبت نام</span></a></li>
-    
+    <li><a href="http://127.0.0.1:8000/login"><span>ورود به سایت</span></a></li>
+    <li><a href="http://127.0.0.1:8000/proffer/{{username}}"><span>پیشنهاد کراسه به شما  </span></a></li>
 	
     {%if not epassword%}
 			
@@ -166,10 +167,11 @@ background-repeat:no-repeat; background-position:center top;">
 <div class="theme-designer"><div class="menu-title">لیست موضوعی کتاب ها</div></div>
 <div class="theme-designer2"><div class="t-d2-2"><div align="right">
 
-<div class="vmenu3"><a  title="شامل کتب فنی و مهندسی و علوم پایه" href="http://127.0.0.1:8000/book/{{ username }}/UN/1" >مذهبی</a></div>
+<div class="vmenu3"><a title="شامل کتب فنی و مهندسی و علوم پایه" href="http://127.0.0.1:8000/book/{{ username }}/UN/1" >مذهبی</a></div>
 <div class="vmenu3"><a  title="کتب دانشگاهی هنر و مطالعه آزاد" href="http://127.0.0.1:8000/book/{{ username }}/AR/1" >هنری</a></div>
 <div class="vmenu3"><a  title="بهترین کتب علمی دنیا :دی" href="http://127.0.0.1:8000/book/{{ username }}/SC/1" >علمی</a></div>
 <div class="vmenu3"><a  title="شامل کتب داستان ، رنگ آمیزی و کتب آموزش کودکان" href="http://127.0.0.1:8000/book/{{ username }}/KD/1" >کودکان</a></div>
+
 </div></div></div>
 <div class="theme-designer3"></div><div class="space3"></div>
 </BlogLinksBlock>
@@ -213,60 +215,11 @@ background-repeat:no-repeat; background-position:center top;">
 
 
 {% block content %}
-{{list_search}}
 
-{% if not empty%}
+    با مراجعه به فهرست موضوعی کتاب ها می توانید برای خرید اقدام کنید
 
-	<div id="table" style="position:absolute;top : 30px ;left:370px;height:465px;width:580px"">
-        		<table id="t1">
-					
-					
-					<tr bgcolor="#3399FF">
-					  <th><p style="font-size : 12pt  ; color : black">__آیدی __</p> </th>
-					  <th><p style="font-size : 12pt  ; color : black">__نام کتاب__ </p>  </th>
-					  <th><p style="font-size : 12pt  ; color : black"> __نام انتشارات__</p> </th>
-					  <th><p style="font-size : 12pt  ; color : black"> __قیمت__ </p> </th>
-					  
-					  
-					</tr>
-					<tr>
-					{%for m in endlist%}
-						<tr bgcolor="#3399FF">{%for x in m%}
-							<td bgcolor="#94B8B8"><a href="http://127.0.0.1:8000/infbook/{{x}}"><center><p  style="font-size : 12pt  ; color : black"> {{x}} </p> </th></a>
-						{%endfor%}</tr>
-						
-					{%endfor%}
-					</tr>
-		
-	
-	</div>
+	{% endblock %}
 
-
-
-
-
-
-
-
-{%endif%}
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-
-{%endblock%}
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 			

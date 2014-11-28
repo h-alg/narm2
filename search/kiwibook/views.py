@@ -36,7 +36,7 @@ from django.http import HttpResponse
 
 ############
 
-def search(request,username):
+def search(request):
     empty = False
     errors=[]
     s_name= request.GET["selection"]
@@ -52,7 +52,8 @@ def search(request,username):
             errors.append("not found")
             return render_to_response('base2.html',{'errors':error})
         else:
-            return render_to_response('prffer.html',{'list_search':list_search,'username':username})
+            endlist = 
+            return render_to_response('prffer.html',{'list_search':list_search,'username':username , 'endlist' : endlist})
     else:
         errors.append("empty field")
         return render_to_response('base2.html',{'errors':error})
