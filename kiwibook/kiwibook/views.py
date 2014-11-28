@@ -261,5 +261,28 @@ def inf_book(request , id_book):
 
     return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_author' : book_author})    
     
-    
+
+
+    #####pegah
+
+def search(request,username):
+    empty = False
+    errors=[]
+    s_name= request.GET["selection"]
+    if 'q' in request.GET and request.GET['q']:
+        message = request.GET['q']
+        phrase = message.encode('utf-8')
+        if s_name=="author name":
+            list_search = Book.objects.filter(author__icontains=phrase)
+        if s_name=="name of book":
+            list_search = Book.objects.filter(name__icontains=phrase)
+
+        if str(list_search)=="[]":
+            errors.append("not found")
+            return render_to_response('base2.html',{'errors':errors})
+        else:
+            return render_to_response('prffer.html',{'list_search':list_search,'username':username})
+    else:
+        errors.append("empty field")
+        return render_to_response('base2.html',{'errors':errors})
         
