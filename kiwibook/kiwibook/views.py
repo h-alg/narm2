@@ -1,11 +1,14 @@
 from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+
 from django.template.loader import get_template
 from django.template import Context
 from django.template import RequestContext , loader
 from django.shortcuts import render_to_response 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.core.context_processors import csrf 
 from django.http import HttpResponse 
 import datetime
@@ -15,6 +18,11 @@ import codecs
 ###DPI
 from mydatabase.models import Users
 from mydatabase.models import Book
+from kiwibook.forms import BookForm
+import kiwibook.forms
+from django import forms
+
+
 #from db.models import person
 #from db.models import case
 #from db.models import laptop
@@ -287,4 +295,32 @@ def search(request):
     else:
         errors.append("empty field")
         return render_to_response('base2.html',{'errors':errors})
-        
+#hodaaaaaaaaaaaaaaaa
+def sefaresh(request):
+    # A HTTP POST?
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == 'POST':
+        form = BookForm(request.POST,request.FILES)
+
+        # Have we been provided with a valid form?
+        if form.is_valid():
+            # Save the new category to the database.
+            form.save(commit=True)
+
+            # Now call the index() view.
+            # The user will be shown the homepage.
+            return HttpResponseRedirect('/thanks.html')
+        else:
+            # The supplied form contained errors - just print them to the terminal.
+            print form.errors
+    else:
+        # If the request was not a POST, display the form to enter details.
+        form = BookForm()
+
+    # Bad form (or form details), no form supplied...
+    # Render the form with error messages (if any).
+    return render(request,'sefaresh.html',{'form':form})
