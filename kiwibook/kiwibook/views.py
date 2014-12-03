@@ -261,7 +261,9 @@ def proffer(request , username):
 
     
 def inf_book(request , id_book):
-    new_book = Book.objects.get(id_book__icontains=id_book)
+    new_book = Book.objects.get(id_book=id_book)
+    #new_book = Book.objects.get(id_book__icontains=id_book)
+
     book_name = new_book.name
     book_price = new_book.price
     book_author = new_book.author

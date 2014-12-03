@@ -1,10 +1,10 @@
 
 from django.conf.urls import patterns, include, url
 
-from django.contrib import admin
-admin.autodiscover()
+import django.contrib
+django.contrib.admin.autodiscover()
 
-from django.conf.urls.defaults import * 
+#from django.conf.urls.defaults import *
 from kiwibook.views import *
 
 
@@ -36,9 +36,9 @@ urlpatterns = patterns('',
 
                        
 
-url(r'^admin/', include(admin.site.urls)),
+url(r'^admin/', include(django.contrib.admin.site.urls)),
 url(r'^mydatabase/',include('mydatabase.urls')),
-url(r'^mydatabase/',include(admin.site.urls)),
+url(r'^mydatabase/',include(django.contrib.admin.site.urls)),
 
 
 
