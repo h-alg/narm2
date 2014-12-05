@@ -1,10 +1,8 @@
 from django.db import models
-from multiselectfield import MultiSelectField
 from django.forms import ModelForm
 
 
 # Create your models here.
-MY_CHOICES=((1,'art'),(2,'science'))
 class Users(models.Model):
     username = models.CharField(primary_key=True, max_length=100)
     password = models.CharField(max_length=100)
@@ -13,16 +11,10 @@ class Users(models.Model):
     # picture_user = models.ImageField(upload_to= None , height_field = None , width_field = None , max_length = 100)
     adress = models.CharField(max_length=500)
     hesab = models.IntegerField()
-    favorite=  MultiSelectField(choices=MY_CHOICES)
-
+    favorite = ['-abc']
 
     def __unicode__(self):
         return self.username
-
-class UserForm(ModelForm):
-    class Meta:
-        model=Users
-        fields=['username','password','email','adress','hesab','favorite']
 
 
 class Book(models.Model):
@@ -50,7 +42,7 @@ class Book(models.Model):
         return '%s' % self.id_book
 
 
-
+from django.forms import ModelForm
 
 
 class BookForm(ModelForm):
