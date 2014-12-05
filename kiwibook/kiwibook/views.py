@@ -6,6 +6,8 @@ from django.shortcuts import render
 
 from django.template.loader import get_template
 from django.template import Context
+from mydatabase.models import BookForm
+from mydatabase.models import UserForm
 from django.template import RequestContext , loader
 from django.shortcuts import render_to_response 
 from django.http import HttpResponse, HttpResponseRedirect
@@ -298,6 +300,8 @@ def search(request):
         errors.append("empty field")
         return render_to_response('base2.html',{'errors':errors})
 #hodaaaaaaaaaaaaaaaa
+
+# Create your views here.
 def sefaresh(request):
     # A HTTP POST?
     """
@@ -306,7 +310,7 @@ def sefaresh(request):
     :return:
     """
     if request.method == 'POST':
-        form = BookForm(request.POST,request.FILES)
+        form = BookForm(request.POST, request.FILES)
 
         # Have we been provided with a valid form?
         if form.is_valid():
@@ -325,4 +329,29 @@ def sefaresh(request):
 
     # Bad form (or form details), no form supplied...
     # Render the form with error messages (if any).
-    return render(request,'sefaresh.html',{'form':form})
+    return render(request, 'sefaresh.html', {'form': form})
+
+
+def log(request):
+    # if this is a POST request we need to process the form data
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = UserForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            form.save(commit=True)
+
+
+
+            return HttpResponseRedirect('/thanks/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = UserForm()
+
+    return render(request, 'log.html', {'form': form })

@@ -26,6 +26,7 @@ urlpatterns = patterns('',
 ###pegah
 (r'^search/$', search),
 (r'^sefaresh/$', sefaresh),
+(r'^log/$', log),
 #(r'^thanks/$', sefaresh),
 
 

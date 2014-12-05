@@ -4,9 +4,9 @@
     <list default="true" id="44b5be07-5d99-47da-9312-5e72edbe27e0" name="Default" comment="" />
     <ignored path="kiwibook.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/views.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417600893063" ignored="false" />
+    <file path="/views.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417602178856" ignored="false" />
     <file path="/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417519849508" ignored="false" />
-    <file path="/urls.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417600425388" ignored="false" />
+    <file path="/urls.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417602471023" ignored="false" />
     <file path="/forms.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417517954264" ignored="false" />
     <file path="D:/HODA/MyUniversity/term7/software2/project/hoda/hoda/settings.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417519851866" ignored="false" />
     <file path="D:/HODA/MyUniversity/term7/software2/project/hoda/hodaapp/models.py" changelist="44b5be07-5d99-47da-9312-5e72edbe27e0" time="1417521296202" ignored="false" />
@@ -45,10 +45,8 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1#52#0" expanded="true" />
-              </folding>
+            <state line="24" column="0" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,7 +63,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwibook/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="19" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+            <state line="27" column="19" selection-start="1212" selection-end="1212" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -74,8 +72,10 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="59" column="0" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,10 +92,28 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="263" column="4" selection-start="9107" selection-end="9107" vertical-scroll-proportion="0.52307695">
+            <state line="302" column="0" selection-start="10408" selection-end="10408" vertical-scroll-proportion="9.336264">
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kiwibook/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kiwibook/templates/log.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="-8.5">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/kiwibook/templates/sabtenam.html" />
         <option value="$PROJECT_DIR$/kiwibook/templates/hello.html" />
         <option value="$PROJECT_DIR$/kiwibook/malihe/templates/main.html" />
         <option value="$PROJECT_DIR$/kiwibook/templates/main.html" />
@@ -133,6 +150,7 @@
         <option value="$PROJECT_DIR$/kiwibook/forms.py" />
         <option value="$PROJECT_DIR$/kiwibook/templates/sefaresh.html" />
         <option value="$PROJECT_DIR$/mydatabase/models.py" />
+        <option value="$PROJECT_DIR$/kiwibook/templates/log.html" />
         <option value="$PROJECT_DIR$/kiwibook/urls.py" />
         <option value="$PROJECT_DIR$/kiwibook/views.py" />
       </list>
@@ -242,14 +260,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="D:/HODA/MyUniversity/term7/software2/project/hoda" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -258,6 +276,11 @@
     <option name="myDjangoConsoleState">
       <PyConsoleSettings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hoda\Desktop\work\narm2\kiwibook\kiwibook\templates" />
+    </key>
   </component>
   <component name="RunManager" selected="Django server.kiwibook">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -275,29 +298,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="kiwibook" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -321,6 +321,29 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="kiwibook" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -406,18 +429,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1376" height="784" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22678843" sideWeight="0.7904" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2305936" sideWeight="0.7904" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2096" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2096" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -498,13 +521,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mydatabase/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="48" selection-end="457" vertical-scroll-proportion="0.0">
@@ -541,26 +557,44 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/templates/proffer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/__init__.py">
+    <entry file="file://$PROJECT_DIR$/kiwibook/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="130" column="5" selection-start="4517" selection-end="4517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kiwibook/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kiwibook/templates/log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+        <state line="27" column="19" selection-start="1212" selection-end="1212" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
@@ -572,32 +606,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mydatabase/models.py">
+    <entry file="file://$PROJECT_DIR$/kiwibook/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/urls.py">
+    <entry file="file://$PROJECT_DIR$/kiwibook/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kiwibook/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="5" selection-start="4517" selection-end="4517" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kiwibook/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="4" selection-start="9107" selection-end="9107" vertical-scroll-proportion="0.52307695">
+        <state line="302" column="0" selection-start="10408" selection-end="10408" vertical-scroll-proportion="9.336264">
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
