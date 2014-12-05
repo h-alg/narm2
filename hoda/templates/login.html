@@ -1,14 +1,92 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+﻿{% extends "base.html" %} 
+{% block title %}ورود به سایت{% endblock %} 
+
+{%block style%}
+	form#form input#input-1, form#form input#input-2 
+	{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background-color: #eaeaea;
+		background: -moz-linear-gradient(top, #ffffff, #eaeaea);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0,#ffffff), color-stop(1.0, #eaeaea));
+		border: 1px solid #cacaca;
+		color: #444;
+		font-size: 14px;
+		margin: 0 0 25px;
+		padding: 8px 10px;
+		width: 200px;
+	}
+	form#form input#submit {
+		-moz-border-radius: 32px;
+		-webkit-border-radius: 32px;
+		background-color: #dedede;
+		background: -moz-linear-gradient(top, #ffffff, #eaeaea);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0,#ffffff), color-stop(1.0, #dedede));
+		border: 1px solid #dedede;
+		color: #484848;
+		font-size: 18px;
+		font-family:"Tahoma"
+		font-weight: bold;
+		padding: 10px 10px;
+	}
+	input:focus, textarea:focus {
+		-webkit-box-shadow:0 0 25px #ccc;
+		-moz-box-shadow:0 0 25px #ccc;
+		box-shadow:0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		transform: scale(1.05);
+	}	
+	input, textarea {
+		font-family: "Tahoma";
+		background-color:#fff;
+		border:1px solid #ccc;
+		font-size:20px;
+		width:200px;
+		min-height:20px;
+		display:block;
+		margin-bottom:16px;
+		margin-top:8px;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+	}
+{%endblock%}
+
+{%block head%}
+<meta charset="utf-8" />
+<title>CSS3 Forms</title>
+<link rel="stylesheet" href="css/CSS3.css" type="text/css" />
+{%endblock%}
+
+{% block content %} 
+
 <body>
-<form action="/login/"enctype="multipart/form-data" method="post">
-            {% csrf_token %}
-            {{ form }}
-             <input type="submit" value="Send">
-        </form>
-</body>
-</html>
+<center> 
+
+{%if sub %}
+	<div>
+		{%if epassword%}
+			<p style="color: red;"> نام کاربری یا رمز عبور اشتباه است</p>
+		{%endif%}
+		
+	</div>	
+{%endif%}
+
+{%if not error%}
+	<p style="color: black;"> با وارد کردن نام کاربری و رمز عبور خود وارد شوید.</p>
+{%endif%} 
+
+<form action="/login/" method="post">
+{% csrf_token %}
+<p style="font-family:Tahoma;font-size:20px;">نام کاربری:</p><input type = "text" name="username">
+<p style="font-family:Tahoma;font-size:20px;">رمز عبور:</p><input type="text" name="password">
+<br>
+<input type="submit" name="submit" value="ورود">
+</form>
+
+{% endblock %} 
+<body>
