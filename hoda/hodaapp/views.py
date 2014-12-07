@@ -220,13 +220,20 @@ def book(request , username , group , page):
 
 def proffer(request , username):
     new_user = Users.objects.get(username__icontains=username)
-   # flist = new_user.favorite
-    flist = ["UN" , "KD"]
+    flist = new_user.favorite
+    
+    #flist = ["UN" , "KD"]
     #too alaghe manD hash daste haye ketaba hast
     #begam az ketabaye oon daste do taye bartar ro BRe
     proffer_list=[]
+    #####
+    endlist=[]
+    ####
     for f in flist :
-        newlist = Book.objects.filter(field__icontains= f)
+        newlist = Book.objects.filter(field= f)
+        #newlist = Book.objects.filter(field__icontains= f)
+
+        
         ratelist=[]
         for onsor in newlist:
             ratelist.append( onsor.rate)
@@ -250,7 +257,7 @@ def proffer(request , username):
 
 
     #return render_to_response('proffer.html', {'flist' : flist  , 'username' : username })
-    return render_to_response('proffer.html', {'endlist':endlist , 'proffer_list' : proffer_list  , 'username' : username })
+    return render_to_response('proffer.html', {'flist' : flist , 'endlist':endlist , 'proffer_list' : proffer_list  , 'username' : username })
 
 
 def inf_book(request , id_book):
@@ -331,10 +338,15 @@ def log (request):
         if form.is_valid():
             form.save(commit=True)
 
-            return HttpResponseRedirect('/thanks/')
+            #return HttpResponseRedirect('/thanks/')
+            #return render(request, 'thanks.html')
+            return render(request, 'thanks.html')
+
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = UserForm()
 
-    return render(request, 'log.html', {'form': form})
+    #return render(request, 'log.html', {'form': form})
+    return render(request, 'sabtenam.html', {'form': form})
+

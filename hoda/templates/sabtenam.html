@@ -69,59 +69,36 @@
 {% block content %} 
 <center> 
 
-{%if sub %}	
-	<div>
-		{%if  tekrari %}
-			<p style="color: red;font-family:Tahoma;font-size:20px;" > نام کاربری وارد شده تکراری است </p>
-		{%endif%}
-	</div>
-	<div>
+<div id="table" style="position:absolute;top : 30px ;left:370px;height:465px;width:580px"">
+        		<table id="t1">
+					
+					
+					<tr bgcolor="#3399FF">
+					  <th><p style="font-size : 12pt  ; color : black"> </p> </th>
+					  <th><p style="font-size : 12pt  ; color : black">  </p>  </th>
+					  
+					  
+					  
+					</tr>
+					<tr>
+					
+					</tr>
+		
 	
-		{%if eusername%}
-			<p style="color:red;font-family:Tahoma;font-size:20px;"> نام کاربری باید بین 4 تا 8 کاراکتر باشد </p>
-
-		{%endif%}
-	</div>
-	
-	<div>
-	
-		{%if eaddress%}
-			<p style="color:red;font-family:Tahoma;font-size:20px;"> فیلد آدرس باید پر شود . </p>
-
-		{%endif%}
-	</div>
-	<div>
-		{%if epassword%}
-			<p style="color: red;font-family:Tahoma;font-size:20px;"> پسوردی بین 6 الی 10 کاراکتر وارد کنید.</p>
-		{%endif%}
-	</div>
-	<div>
-		{%if eemail%}
-			<p style="color: red;font-family:Tahoma;font-size:20px;"> آدرس ایمیل وارد شده معتبر نمی باشد</p>
-		{%endif%}
-	</div>
-	<div>
-		{%if not eusername and not ename and not efamily and not epassword and not eaddress and not eemail and not tekrari%}  	
-	
-			<p style="color: green;font-family:Tahoma;font-size:20px;" dir="rtl">کاربر گرامی {{username}} شما با رمز عبور {{password}} و پست الکترونیک {{email}} در سیستم ثبت شدید. </p>
-		{%endif%}
 	</div>
 
-{%endif%}
 
 
-{%if not error%}
-	<p style="color: black;"> برای ثبت نام لازم است تمام فیلد ها را پر نمایید  </p>
-{%endif%} 
 
-<form action="/sabtenam/" method="get">
-<p style="font-family:Tahoma;font-size:20px;">نام کاربری</p><input type = "text" name="username" id="username">
 
-<p style="font-family:Tahoma;font-size:20px;">کلمه عبور</p><input type = "text" name="password" id="password">
-<p style="font-family:Tahoma;font-size:20px;">پست الکترونیک</p><input type="text" name="email" id="email">
-<p style="font-family:Tahoma;font-size:20px;">آدرس جهت ارسال سفارشات</p><input type="text" name="address" id="address">
-<br>
-<input type="submit" name="submit" value="ثبت">
-</form>
+
+
+
+
+<form action="/sabtenam/" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ form }}
+             <input type="submit" value="Send">
+        </form>
 {% endblock %} 
 </body>
