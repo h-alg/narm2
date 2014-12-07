@@ -292,15 +292,60 @@ def search(request):
             errors.append("not found")
             return render_to_response('base2.html',{'errors':errors})
         else:
+            ##########
+            final_list = []
+            for i in list_search:
+                mylist =[]
+                mylist.append(i.id_book)
+                mylist.append(i.name)
+                mylist.append(i.author)
+                mylist.append(i.price)
+
+                final_list.append(mylist)
+            #########
             #endlist = list_search
-            return render_to_response('proffer.html',{'list_search':list_search })
+            return render_to_response('proffer.html',{'endlist':final_list })
     else:
         errors.append("empty field")
         return render_to_response('base2.html',{'errors':errors})
 
 
+def search1(request):
+    empty = False
+    list_search =[]
+    errors=[]
+    s_name= request.GET["selection"]
+    if 'q' in request.GET and request.GET['q']:
+        message = request.GET['q']
+        if s_name=="author_name":
+            list_search = Book.objects.filter(author__icontains=message)
+        if s_name=="book_name":
+            list_search = Book.objects.filter(name__icontains=message)
+        final_list=[]
+        if str(list_search) == "[]":
+            empty = True
+            errors.append("not found")
+            return render_to_response('base2.html',{'errors':errors})
+        else:
+            final_list = []
+            for i in list_search:
+                mylist =[]
+                mylist.append(i.id_book)
+                mylist.append(i.name)
+                mylist.append(i.author)
+                mylist.append(i.price)
+
+                final_list.append(mylist)
+
+        return render_to_response('proffer.html', {'endlist':final_list})
+
+
+
+
+
 # Create your views here.
 def sefaresh(request):
+    sabt = False
     # A HTTP POST?
     """
 
@@ -317,7 +362,11 @@ def sefaresh(request):
 
             # Now call the index() view.
             # The user will be shown the homepage.
-            return HttpResponseRedirect('/thanks.html')
+            #return HttpResponseRedirect('/thanks.html')
+            sabt = True
+            return render(request, 'sefaresh.html' , {'sabt' :sabt})
+
+
         else:
             # The supplied form contained errors - just print them to the terminal.
             print form.errors
@@ -330,6 +379,7 @@ def sefaresh(request):
     return render(request,'sefaresh.html',{'form':form})
 
 def log (request):
+    sabt = False
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -337,10 +387,13 @@ def log (request):
         # check whether it's valid:
         if form.is_valid():
             form.save(commit=True)
+            sabt = True
 
             #return HttpResponseRedirect('/thanks/')
             #return render(request, 'thanks.html')
-            return render(request, 'thanks.html')
+            #return render(request, 'thanks.html')
+            return render(request, 'sabtenam.html' , {'sabt' :sabt})
+
 
 
     # if a GET (or any other method) we'll create a blank form
