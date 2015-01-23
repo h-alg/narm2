@@ -403,3 +403,19 @@ def log (request):
     #return render(request, 'log.html', {'form': form})
     return render(request, 'sabtenam.html', {'form': form})
 
+
+
+
+##############################################
+def buy(request , username , id_book):
+    new_book = Book.objects.get(id_book=id_book)
+    #new_book = Book.objects.get(id_book__icontains=id_book)
+
+    book_name = new_book.name
+    book_price = new_book.price
+    book_author = new_book.author
+
+    return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_author' : book_author})
+
+
+
