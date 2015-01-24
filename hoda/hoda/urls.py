@@ -10,8 +10,8 @@ urlpatterns = patterns('',
     (r'^sefaresh/$', sefaresh),
      (r'^login/$', login),
      (r'^kerase/$', kerase),
-    (r'^sabtenam/$', log),
-    #(r'^sabtenam/$', sabtenam),
+    #(r'^sabtenam/$', log),
+    (r'^sabtenam/$', sabtenam),
 
     (r'^log/$', log),
     #(r'^aa/$', aa),
@@ -24,6 +24,7 @@ urlpatterns = patterns('',
 
     ###pegah
     (r'^search/$', search),
+    #(r'^zeinab/$', zeinab),
 
     url(r'^admin/', include(admin.site.urls)),
 )

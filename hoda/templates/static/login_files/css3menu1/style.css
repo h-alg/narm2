@@ -1,0 +1,33 @@
+ul#css3menu1{
+	margin:0;list-style:none;padding:6px 6px 6px 0;background-color:#2153dd;background-image:url("mainbk.png");background-repeat:repeat;border-width:1px;border-style:solid;border-color:#B4B4B4;-moz-border-radius:28px;-webkit-border-radius:28px;border-radius:28px;font-size:0;z-index:999;position:relative;display:inline-block;zoom:1;
+	*display:inline;}
+ul#css3menu1 li{
+	display:block;white-space:nowrap;font-size:0;float:left;}
+ul#css3menu1>li{
+	margin:0 0 0 6px;}
+* html ul#css3menu1 li a{
+	display:inline-block;}
+ul#css3menu1 a:active, ul#css3menu1 a:focus{
+	outline-style:none;}
+ul#css3menu1 a{
+	display:block;vertical-align:middle;text-align:center;text-decoration:none;font:12px Arial;color:#666;cursor:pointer;padding:8px 20px;background-color:;background-repeat:repeat;border-width:0;border-style:solid;border-color:transparent;}
+ul#css3menu1 li:hover>a,ul#css3menu1 a.pressed{
+	background-color:#0078FF;border-color:#F8F8F8;border-style:solid;color:#FFF;text-decoration:none;}
+ul#css3menu1 img{
+	border:none;vertical-align:middle;margin-right:8px;}
+ul#css3menu1 img.over{
+	display:none;}
+ul#css3menu1 li:hover > a img.def{
+	display:none;}
+ul#css3menu1 li:hover > a img.over{
+	display:inline;}
+ul#css3menu1 li a.pressed img.over{
+	display:inline;}
+ul#css3menu1 li a.pressed img.def{
+	display:none;}
+ul#css3menu1 li:hover>a,ul#css3menu1 li>a.pressed{
+	background-color:#0078FF;border-style:solid;border-color:#F8F8F8;color:#FFF;text-decoration:none;}
+ul#css3menu1 li.topmenu>a{
+	background-color:;background-image:none;background-position:0 0;border-width:1px 0 0 0;border-style:solid;border-color:transparent;border-radius:16px;-moz-border-radius:16px;-webkit-border-radius:16px;font:bold 13px Tahoma;color:#ffffff;text-decoration:none;text-shadow:0 1px 1px #000000;}
+ul#css3menu1 li.topmenu:hover>a,ul#css3menu1 li.topmenu>a.pressed{
+	background-color:#0edfd8;background-image:url("mainbk.png");background-position:0 100%;border-style:solid;border-color:#F8F8F8;color:#030f0e;text-decoration:none;text-shadow:0 1px 0 #FFFFFF;}

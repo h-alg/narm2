@@ -466,7 +466,234 @@ def endbuy(request , username , id_book):
 
     return render_to_response('endbuy.html', {'list_of_book': list_of_book , 'sum': sum  , 'new_str':end_str})
 
+#######################teste zaher
 
+def zeinab(request):
+   
+    if 'username' in request.POST and request.POST['username']:
+        username = request.POST['username']
+        password = request.POST['password']
+
+
+
+
+        sub = True
+
+        if (not username) and (not password)  :
+            vorood = False
+
+        else :
+            epassword= False
+            vorood = True
+            new_user = Users.objects.get(username = username)
+            if new_user.password != password :
+                epassword = True
+            else:
+                template=loader.get_template('zeinab.html' )
+                context=RequestContext(request,{'epassword': epassword , 'username':username ,'username': username})
+                    
+                return HttpResponse(template.render(context))
+                
+            
+
+
+            
+
+
+        template=loader.get_template('base.html')
+        context=RequestContext(request,{'epassword': epassword ,  "sub" : sub })
+        return HttpResponse(template.render(context))
+
+    #else :
+       # sub = False
+       # template=loader.get_template('base.html')
+      #  context=RequestContext(request,{'error': False , "sub" : sub  })
+        #return HttpResponse(template.render(context))
+    ######sabte nam
+    #elif 'uname' in request.GET and request.GET['uname']:
+    elif 'usernamesignup' in request.POST and request.POST['usernamesignup']:
+        #f = request.GET['firstname']
+        #p = request.GET['password']
+        #e = request.GET['email']
+
+
+       # username = request.GET['uname']
+        
+        #password = request.GET['youpasswd']
+        #email = request.GET['youemail']
+        #address = request.GET['youaddress']
+
+
+
+        username = request.POST['usernamesignup']
+        #name = request.GET['name']
+        #family = request.GET['family']
+        password = request.POST['passwordsignup']
+        email = request.POST['emailsignup']
+        #birthday = request.GET['birthday']
+        address = request.POST['addresssignup']
+
+
+
+
+        sub = True
+        #if not (username or name or family or password or email or address):
+        if not (username or password or email or address):
+
+        #if (not f) and (not p)  and (not e):
+            vorood = False
+
+        else :
+            eusername = False
+            #ename= False
+            #efamily= False
+            epassword= False
+            eemail= False
+            eaddress = False
+            #ebirthday=False
+            vorood = True
+            #mina = Users.objects.filter(name__icontains=f)
+            check_user = Users.objects.filter(username__icontains=username)
+
+            str_check = str (check_user)
+            if str_check == "[]" :
+                tekrari = False
+                if len(str(username)) > 15 or len(str(username)) < 4:
+                    eusername = True
+                #elif len (str(name)) > 10 or len(str(name)) < 3 :
+                    #ename = True
+                #elif len (str(family)) > 30 or len(str(family)) < 3 :
+                    #efamily = True
+                elif len (str(password)) > 15 or len(str(password)) < 4 :
+                    epassword = True
+                #elif len (str(address)) > 15 or len(str(name)) < 3 :
+                    #ename = True
+                elif len(str(address)) == 0 :
+                    eaddress = True
+                #elif len(str(email)) == 0 :
+                elif not(((str(email).find("@") < str(email).find(".") ) and (str(email).find("@")!= -1 ))):
+                    eemail = True
+                else:
+                    #new_user=Users(name=name,password= password , email = email , username= username , adress = address , family = family , hesab = 0)
+                    new_user=Users(password= password , email = email , username= username , adress = address , hesab = 0)
+
+                    new_user.save()
+            else :
+                tekrari = True
+                #ezafe kardan be db
+
+#        return render_to_response('sabtenam.html', {'efamily': efamily ,'eaddress': eaddress,'eemail': eemail ,'epassword': epassword ,'eusername' : eusername , 'ename' : ename , 'username' : username , 'password' :password , 'email' : email , 'error': vorood , "tekrari" : tekrari , "sub" : sub})
+        return render_to_response('zeinab.html', {'eaddress': eaddress,'eemail': eemail ,'epassword': epassword ,'eusername' : eusername  , 'username' : username , 'password' :password , 'email' : email , 'error': vorood , "tekrari" : tekrari , "sub" : sub})
+
+
+    #else :
+       # sub = False
+       # return render_to_response('base.html', {'error': False , "sub" : sub})
+    else :
+        sub = False
+        template=loader.get_template('base.html')
+        context=RequestContext(request,{'error': False , "sub" : sub  })
+        return HttpResponse(template.render(context))
+
+
+
+#################################
+def kerase(request):
+   
+    if 'username' in request.POST and request.POST['username']:
+        username = request.POST['username']
+        password = request.POST['password']
+
+
+
+
+        sub = True
+
+        if (not username) and (not password)  :
+            vorood = False
+
+        else :
+            epassword= False
+            vorood = True
+            new_user = Users.objects.get(username = username)
+            if new_user.password != password :
+                epassword = True
+            else:
+                ########## *********** hamin ja Pshnehad e ma behesh bayad maloom she ke too safhe ash neshoon beDm : Pshnehad e kerase be shoma !!
+                template=loader.get_template('afterlog.html' )
+                context=RequestContext(request,{'epassword': epassword , 'username':username ,'username': username})
+                    
+                return HttpResponse(template.render(context))
+                
+            
+
+
+            
+
+
+        template=loader.get_template('base.html')
+        context=RequestContext(request,{'epassword': epassword ,  "sub" : sub })
+        return HttpResponse(template.render(context))
+
+   
+    elif 'usernamesignup' in request.POST and request.POST['usernamesignup']:
+        
+
+
+
+        username = request.POST['usernamesignup']
+        password = request.POST['passwordsignup']
+        email = request.POST['emailsignup']
+        address = request.POST['addresssignup']
+
+
+
+        sabtshod = False
+        sub = True
+        if not (username or password or email or address):
+
+            vorood = False
+
+        else :
+            eusername = False
+            epassword= False
+            eemail= False
+            eaddress = False
+            vorood = True
+            check_user = Users.objects.filter(username__icontains=username)
+
+            str_check = str (check_user)
+            if str_check == "[]" :
+                tekrari = False
+                if len(str(username)) > 15 or len(str(username)) < 4:
+                    eusername = True
+                elif len (str(password)) > 15 or len(str(password)) < 4 :
+                    epassword = True
+                elif len(str(address)) == 0 :
+                    eaddress = True
+                elif not(((str(email).find("@") < str(email).find(".") ) and (str(email).find("@")!= -1 ))):
+                    eemail = True
+                else:
+                    new_user=Users(password= password , email = email , username= username , adress = address , hesab = 0)
+
+                    new_user.save()
+                    sabtshod = True
+            else :
+                tekrari = True
+
+        return render_to_response('base.html', {'sabtshod' : sabtshod , 'eaddress': eaddress,'eemail': eemail ,'epassword': epassword ,'eusername' : eusername  , 'username' : username , 'password' :password , 'email' : email , 'error': vorood , "tekrari" : tekrari , "sub" : sub})
+
+
+    
+    else :
+        sub = False
+        template=loader.get_template('base.html')
+        context=RequestContext(request,{'error': False , "sub" : sub  })
+        return HttpResponse(template.render(context))
+
+
+
+#################################
 
 
 
