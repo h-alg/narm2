@@ -406,7 +406,6 @@ def log (request):
 
 
 
-##############################################
 def buy(request , username , id_book):
     new_book = Book.objects.get(id_book=id_book)
     #new_book = Book.objects.get(id_book__icontains=id_book)
@@ -414,8 +413,60 @@ def buy(request , username , id_book):
     book_name = new_book.name
     book_price = new_book.price
     book_author = new_book.author
+    book_id = str(new_book.id_book)
 
-    return render_to_response('infbook.html', {'book_name' : book_name  , 'book_price' : book_price , 'book_author' : book_author})
+
+    
+        
+
+    return render_to_response('infbook.html', {'username' : username , 'book_id' : book_id ,'book_name' : book_name   , 'book_price' : book_price , 'book_author' : book_author})
+
+
+
+#######################
+def endbuy(request , username , id_book):
+    new_book = Book.objects.get(id_book=id_book)
+    #new_book = Book.objects.get(id_book__icontains=id_book)
+
+    book_name = new_book.name
+    book_price = new_book.price
+    book_author = new_book.author
+    book_id = str(new_book.id_book)
+    #book_str=""
+    #book_str=book_str+book_id+','
+    new_user= Users.objects.get(username = username)    #new_user= ye usere kufti
+    new_str = new_user.books                            #new_str = ketabaye usere kufti be surate string
+    end_str= new_str +"," + str(id_book)                #end_str = stringe ketabaye kufti +
+    new_user.books = end_str
+    new_user.save()
+    book_list=end_str.split(',')
+    list_of_book =[]
+
+    #booklist : id haye ketabaye too sabad
+    for id in book_list:
+        newbook = []
+        new_book = Book.objects.get(id_book=id)
+
+        book_name = new_book.name
+        book_price = new_book.price
+        newbook.append(book_name)
+        newbook.append(book_price)
+
+
+        list_of_book.append(newbook)
+    sum = 0
+    for i in range( len(list_of_book)):
+        sum = sum + int(list_of_book[i][1])
+
+    l=["jame kol" , sum]
+    list_of_book.append(l)
+
+
+        
+
+    return render_to_response('endbuy.html', {'list_of_book': list_of_book , 'sum': sum  , 'new_str':end_str})
+
+
 
 
 

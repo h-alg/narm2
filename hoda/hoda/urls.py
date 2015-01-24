@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     (r'^proffer/(?P<username>.+)$', proffer),
     (r'^infbook/(?P<id_book>.+)$', inf_book),
     (r'^buy/(?P<username>.+)/(?P<id_book>.+)$', buy),
+    (r'^endbuy/(?P<username>.+)/(?P<id_book>.+)$', endbuy),
 
     ###pegah
     (r'^search/$', search),

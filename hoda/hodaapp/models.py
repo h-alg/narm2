@@ -15,6 +15,7 @@ class Users(models.Model):
     # picture_user = models.ImageField(upload_to= None , height_field = None , width_field = None , max_length = 100)
     adress = models.CharField(max_length=500)
     hesab = models.IntegerField()
+    books= models.CharField(max_length=500)
     favorite=  MultiSelectField(choices=MY_CHOICES)
 
 
