@@ -1,0 +1,78 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	background: #FFF;
+	}
+
+h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	}
+
+hr {
+	border:none;
+
+	height:5px;
+	margin-bottom:25px;
+	}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+img {
+	border: none;
+	}
+	
+#menu {
+	width: 200px;
+	margin: 10px;
+	/*border:  solid ;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;
+*/
+	border-color: #3b40ff;
+	border-size: 5px;
+	border-width: 5px;
+	}
+	
+#menu li a {
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 30px;
+	text-decoration: none;
+border:  solid ;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;
+	}	
+	
+#menu li a:link, #menu li a:visited {
+	color:#3b40ff;
+	display: block;
+	background:  url(menu.gif);
+	padding: 8px 0 0 10px;
+    border:  solid ;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;
+	}
+
+#menu li a:hover {
+	color: #627EB7;
+	background:  url(menu.gif) 0 -32px;
+	padding: 8px 0 0 10px;
+
+	}
+ul.v-menu{
+    list-style:none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-right: 0;
+
+    background: #fbfbff;
+    padding:5px;
+    border:  solid ;border-color:#3b40ff ; border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;
+}
+ul.v-menu li{padding:0px; background: #294bff; margin-bottom:5px; border:  solid ;border-color:#3b40ff ; border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;}
+ul.v-menu li:hover{padding:0px; background: #62ddfc; margin-bottom:5px}
+ul.v-menu p{text-decoration:none; color:#fff;position:relative;top:15px;left:20px;text-align:center; font-family:Tahoma;font-size: 12pt;}

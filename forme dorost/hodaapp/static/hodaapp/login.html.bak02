@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en" class=" js csstransforms csstransforms3d" style="height: 100%;">
+
+  <head>
+      <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Slideshow with jmpress.js">
+        <meta name="keywords" content="jmpress, slideshow, container, plugin, jquery, css3">
+        <meta name="author" content="for Codrops">
+        <link rel="shortcut icon" href="../favicon.ico">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/demo.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+
+
+ <link href="css/kerase.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="css/kerase.css" rel="stylesheet">
+
+
+<!-- Start css3menu.com HEAD section -->
+<link rel="stylesheet" href="login_files/css3menu1/style.css" type="text/css" />
+
+<!-- End css3menu.com HEAD section -->
+
+
+</head>
+
+  <body>
+
+<style>
+body {
+    background-color: 	#E6E6FA;
+}
+</style>
+<div class="container">
+	<div class="row clearfix">
+	<div class="col-md-12 column" >
+
+			<div class="row clearfix">
+				<div class="col-md-12 column"style="border: 5px solid #3b40ff;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;background-image:url(img/seamless-fabric-background-4903761.jpg);">
+
+                     <!--<div class="col-md-8 column">-->
+                     <img src="img/20.png" border="0" alt="logo"  style=" position: relative;left :90px;top: -5px; ">
+                    <!-- </div>-->
+<!--<div class="col-md-4 column">-->
+       					<img src="img/kerase.png" border="0" alt="logo" style="  position: absolute; right:550px; top:50px ;">
+                 <script type="text/javascript">
+
+function GetClock(){
+d = new Date();
+nday   = d.getDay();
+nmonth = d.getMonth();
+ndate  = d.getDate();
+nyear = d.getYear();
+nhour  = d.getHours();
+nmin   = d.getMinutes();
+if(nyear<1000) nyear=nyear+1900;
+
+if(nmin <= 9){nmin="0"+nmin}
+
+
+document.getElementById('clockbox').innerHTML=""+(nmonth+1)+"/"+ndate+"/"+nyear+" "+nhour+":"+nmin+"";
+setTimeout("GetClock()", 1000);
+}
+window.onload=GetClock;
+</script>
+<span id="clockbox" style="font:normal 11px verdana;text-shadow: 2px 2px 8px #FF0000;color:Black;font-family:tahoma;font-size:10pt;;position: relative;top:-50px;left: 800px;"></span>
+           <span id="LblUserName" style="position: relative;left:800px; top:-130px;text-shadow: 2px 2px 8px #FF0000;color:Black;font-family:tahoma;font-size:10pt;"> کاربر مهمان خوش آمدید </span>
+     
+<hr class="prettyline" style="position: relative;top: 5px;">
+<!-- Start css3menu.com BODY section id=1 -->
+<ul id="css3menu1" class="topmenu" style="position: relative;left: 700px;top: 1px;" >
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="login_files/css3menu1/bdownload.png" alt="خروج"/>خروج</a></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="login_files/css3menu1/bcontact.png" alt="ارتباط با ما"/>ارتباط با ما</a></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="login_files/css3menu1/bnews1.png" alt="درباره ما"/>درباره ما</a></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="login_files/css3menu1/bhome1.png" alt="صفحه اصلی"/>صفحه اصلی</a></li>
+</ul>
+
+<!-- End css3menu.com BODY section -->
+
+<!--
+<div id="menu" style="position: relative;top: -15px;">
+        <ul class="menu">
+            <li><a class="haschild" title="" href="">خانه</a>
+                <ul class="sub-menu">
+                    <li><a class="haschild" title="" href="">منو 1</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a title="" href="">منو 2</a></li>
+                    <li><a class="haschild" title="" href="">منو 3</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+<li><a class="haschild" title="" href="">درباره ما</a>
+                <ul class="sub-menu">
+                    <li><a title="" href="">منو 1</a></li>
+                    <li><a title="" href="">منو 2</a></li>
+                    <li><a class="haschild" title="" href="">منو 3</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+<li><a class="haschild" title="" href="">سرویس ها</a>
+                <ul class="sub-menu">
+                    <li><a title="" href="">منو 1</a></li>
+                    <li><a class="haschild" title="" href="">منو 2</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="haschild" title="" href="">منو 3</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+          <li><a title="" href="">وبلاگ</a></li>
+<li><a class="haschild" title="" href="">تماس با ما</a>
+                <ul class="sub-menu">
+                    <li><a title="" href="">منو 1</a></li>
+                    <li><a class="haschild" title="" href="">منو 2</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="haschild" title="" href="">منو 3</a>
+                        <ul>
+                            <li><a title="" href="">زیر منو 1</a></li>
+                            <li><a title="" href="">زیر منو 2</a></li>
+                            <li><a title="" href="">زیر منو 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a title="" href="">منو 4</a></li>
+                    <li><a title="" href="">منو 5</a></li>
+                </ul>
+            </li>
+      </ul>-->
+    </div>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-8 column">
+				</div>
+				<div class="col-md-4 column">
+
+			<section id="jms-slideshow" class="jms-slideshow">
+				<div class="jms-wrapper color-1 step-step-1 delegating-step-step-1" style="-webkit-transition: 1s; transition: 1s; position: relative; overflow: hidden;" tabindex="0"><div style="transform-origin: left top 0px; transition: 0s ease-in-out 0s; -webkit-transition: 0s ease-in-out 0s; transform-style: preserve-3d; position: absolute; top: 50%; left: 50%; perspective: 1000px; transform: translate(-50%, -50%) scaleX(1) scaleY(1) scaleZ(1) scaleX(1) scaleY(1) scaleZ(1);"><div style="transform-origin: left top 0px; transition: 0s ease-in-out 0s; -webkit-transition: 0s ease-in-out 0s; transform-style: preserve-3d; position: absolute; transform: translate(-50%, -50%) scaleX(1) scaleY(1) scaleZ(1) translate3d(0px, 0px, 0px) scaleX(1) scaleY(1) scaleZ(1) rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(0px, 0px, 0px);"><div class="step jmstep1 loaded active" data-color="color-1" id="step-1" style="position: absolute; transform-style: preserve-3d; transform: translate(-50%, -50%) translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);">
+					<div class="jms-content">
+						<h3>Just when I thought...</h3>
+						<p>From fairest creatures we desire increase, that thereby beauty's rose might never die</p>
+						<a class="jms-link" href="#">Read more</a>
+					</div>
+					<img src="img/1.png">
+				</div><div class="step jmstep2 loaded" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30" id="step-2" style="position: absolute; transform-style: preserve-3d; transform: translate(-50%, -50%) translate3d(0px, 500px, 0px) rotateX(30deg) rotateY(0deg) rotateZ(0deg) scaleX(0.4) scaleY(0.4) scaleZ(1);">
+					<div class="jms-content">
+						<h3>Holy cannoli!</h3>
+						<p>But as the riper should by time decease, his tender heir might bear his memory</p>
+						<a class="jms-link" href="#">Read more</a>
+					</div>
+					<img src="img/2.png">
+				</div><div class="step jmstep3" data-color="color-3" data-x="2000" data-z="3000" data-rotate="170" id="step-3" style="position: absolute; transform-style: preserve-3d; transform: translate(-50%, -50%) translate3d(2000px, 0px, 3000px) rotateX(0deg) rotateY(0deg) rotateZ(170deg) scaleX(1) scaleY(1) scaleZ(1);">
+					<div class="jms-content">
+						<h3>No time to waste</h3>
+						<p>Within thine own bud buriest thy content and, tender churl, makest waste in niggarding</p>
+						<a class="jms-link" href="#">Read more</a>
+					</div>
+					<img src="img/3.png">
+				</div><div class="step jmstep4" data-color="color-4" data-x="3000" id="step-4" style="position: absolute; transform-style: preserve-3d; transform: translate(-50%, -50%) translate3d(3000px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);">
+					<div class="jms-content">
+						<h3>Supercool!</h3>
+						<p>Making a famine where abundance lies, thyself thy foe, to thy sweet self too cruel</p>
+						<a class="jms-link" href="#">Read more</a>
+					</div>
+					<img src="img/4.png">
+				</div><div class="step jmstep5 loaded" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45" id="step-5" style="position: absolute; transform-style: preserve-3d; transform: translate(-50%, -50%) translate3d(4500px, 0px, 1000px) rotateX(0deg) rotateY(45deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);">
+					<div class="jms-content">
+						<h3>Did you know that...</h3>
+						<p>Thou that art now the world's fresh ornament and only herald to the gaudy spring</p>
+						<a class="jms-link" href="#">Read more</a>
+					</div>
+					<img src="img/5.png">
+				</div></div></div></div>
+
+
+
+
+			<nav class="jms-arrows"><span class="jms-arrows-prev"></span><span class="jms-arrows-next"></span></nav><nav class="jms-dots"><span class="jms-dots-current"></span><span></span><span></span><span></span><span></span></nav></section>
+
+                </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script type="text/javascript">
+			$(function() {
+
+				$( '#jms-slideshow' ).jmslideshow();
+
+			});
+		</script>
+	<script src="js/kerase.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+ <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+      <!--<![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+    <noscript>
+        &lt;style&gt;
+        .step {
+        width: 100%;
+        position: relative;
+        }
+        .step:not(.active) {
+        opacity: 1;
+        filter: alpha(opacity=99);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+    </noscript>
+    <noscript> }
+        .step:not(.active) a.jms-link{
+        opacity: 1;
+        margin-top: 40px;
+        }
+        &lt;/style&gt;
+    </noscript>
+  </body>
+
+</html>

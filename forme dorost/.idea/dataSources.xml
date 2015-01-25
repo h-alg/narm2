@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="773148913">
+    <data-source source="LOCAL" name="Django default" uuid="ad0c1344-ac11-4f24-8bc6-b04ede1f617b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\hoda\Desktop\hoda\db.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
