@@ -419,7 +419,10 @@ def buy(request , username , id_book):
     
         
 
-    return render_to_response('infbook.html', {'username' : username , 'book_id' : book_id ,'book_name' : book_name   , 'book_price' : book_price , 'book_author' : book_author})
+    #return render_to_response('infbook.html', {'username' : username , 'book_id' : book_id ,'book_name' : book_name   , 'book_price' : book_price , 'book_author' : book_author})
+
+    return render_to_response('infbook1.html', {'username' : username , 'book_id' : book_id ,'book_name' : book_name   , 'book_price' : book_price , 'book_author' : book_author})
+
 
 
 
@@ -435,8 +438,14 @@ def endbuy(request , username , id_book):
     #book_str=""
     #book_str=book_str+book_id+','
     new_user= Users.objects.get(username = username)    #new_user= ye usere kufti
-    new_str = new_user.books                            #new_str = ketabaye usere kufti be surate string
-    end_str= new_str +"," + str(id_book)                #end_str = stringe ketabaye kufti +
+    new_str = new_user.books
+    if (new_str == ''):
+        end_str=str(id_book)
+    else:
+        end_str = new_str + ',' +str(id_book)
+    
+    #new_str = ketabaye usere kufti be surate string
+    #end_str= new_str +"," + str(id_book)                #end_str = stringe ketabaye kufti +
     new_user.books = end_str
     new_user.save()
     book_list=end_str.split(',')
@@ -449,22 +458,24 @@ def endbuy(request , username , id_book):
 
         book_name = new_book.name
         book_price = new_book.price
-        newbook.append(book_name)
+        
         newbook.append(book_price)
+        newbook.append(book_name)
 
 
         list_of_book.append(newbook)
     sum = 0
     for i in range( len(list_of_book)):
-        sum = sum + int(list_of_book[i][1])
+        sum = sum + int(list_of_book[i][0])
 
-    l=["jame kol" , sum]
+    l=[ sum,"       sum   " ]
     list_of_book.append(l)
 
 
         
 
-    return render_to_response('endbuy.html', {'list_of_book': list_of_book , 'sum': sum  , 'new_str':end_str})
+    return render_to_response('endbuy.html', {'list_of_book': list_of_book , 'sum': sum  , 'new_str':end_str , 'username' : username })
+    #return render_to_response('faeze.html', {'list_of_book': list_of_book , 'sum': sum  , 'new_str':end_str , 'username' : username})
 
 #######################teste zaher
 
@@ -619,9 +630,54 @@ def kerase(request):
             if new_user.password != password :
                 epassword = True
             else:
+                
                 ########## *********** hamin ja Pshnehad e ma behesh bayad maloom she ke too safhe ash neshoon beDm : Pshnehad e kerase be shoma !!
-                template=loader.get_template('afterlog.html' )
-                context=RequestContext(request,{'epassword': epassword , 'username':username ,'username': username})
+#####proffer
+
+                new_user = Users.objects.get(username__icontains=username)
+                flist = new_user.favorite
+                top_book=[]
+                for f in flist :
+                    newlist = Book.objects.filter(field= f)
+                    #ratelist=[]
+                    #for nn in newlist:
+                       #ratelist.appned(nn.rate)
+                    top_book.append(newlist[0])
+                    top_book.append(newlist[1])
+                    top_book.append(newlist[2])
+                int1=0
+                int2=len(top_book) - 1
+                int3 = (int2 + int1)/2
+
+                book1= top_book[int1]
+                book_name1 = book1.name
+                book_author1= book1.author
+                book_price1= book1.price
+                book_id1 = book1.id_book
+
+                book2= top_book[int2]
+                book_name2 = book2.name
+                book_author2= book2.author
+                book_price2= book2.price
+                book_id2 = book2.id_book
+
+                book3= top_book[int3]
+                book_name3 = book3.name
+                book_author3= book3.author
+                book_price3= book3.price
+                book_id3 = book3.id_book
+                
+                
+        #
+###########
+ 
+
+
+                
+                template=loader.get_template('afterlog1.html' )
+                #context=RequestContext(request,{'epassword': epassword , 'username':username ,'username': username})
+                context=RequestContext(request,{'epassword': epassword , 'username':username ,'username': username,'book_name1' : book_name1,'book_author1':book_author1 , 'book_price1' : book_price1 , 'book_id1':book_id1 , 'book_name2' : book_name2,'book_author2':book_author2 , 'book_price2' : book_price2 , 'book_id2':book_id2 ,'book_name3' : book_name3,'book_author3':book_author3 , 'book_price3' : book_price3 , 'book_id3':book_id3})
+                  
                     
                 return HttpResponse(template.render(context))
                 
@@ -694,6 +750,85 @@ def kerase(request):
 
 
 #################################
+
+
+def listofbook(request , username , group , page):
+    a=(int(page)-1) * 3
+    b = a+3
+    newpage = str(int(page)+1)
+    oldpage = str(int(page)-1)
+    if int(oldpage) == 0:
+        oldpage = "1"
+    error = False
+    empty = False
+    user = username
+    endlist = []
+
+    if int(oldpage) == 0:
+        error = True
+    #book_list = Books.objects.all()[a:b]
+
+
+    ####test safhe bad
+
+    testlist=Book.objects.filter(field__icontains=group )
+    l = len(testlist)
+    if  (l - b < 3):
+        #empty = True
+        newpage = page
+    else :
+        empty = False
+        #newpge = str(page)
+        ############
+    book_list=Book.objects.filter(field__icontains=group )[a:b]
+    #book_list=Book.objects.filter(context__icontains=group )[a:b]
+
+    if str(book_list)== "[]":
+        empty = True
+    else:
+        book_name1 = book_list[0].name
+        book_author1= book_list[0].author
+        book_price1= book_list[0].price
+        book_id1 = book_list[0].id_book
+
+        book_name2 = book_list[1].name
+        book_author2= book_list[1].author
+        book_price2= book_list[1].price
+        book_id2 = book_list[1].id_book
+
+        book_name3 = book_list[2].name
+        book_author3= book_list[2].author
+        book_price3= book_list[2].price
+        book_id3 = book_list[2].id_book
+
+
+
+        
+        #endlist = []
+       # for i in book_list:
+        #    mylist =[]
+        #    mylist.append(i.id_book)
+        #    mylist.append(i.name)
+        #    mylist.append(i.author)
+          #  mylist.append(i.price)
+
+          #  endlist.append(mylist)
+
+    #gozar=s.sharh
+
+    #return render_to_response('book_list.html', {'endlist' : endlist , 'empty': empty ,'error': error , 'book_list' : book_list, 'newpage' : newpage , 'oldpage': oldpage , 'group' : group , 'username' : username })
+    return render_to_response('listofbook.html', {'l' : l , 'a' : a , 'book_name1' : book_name1,'book_author1':book_author1 , 'book_price1' : book_price1 , 'book_id1':book_id1 , 'book_name2' : book_name2,'book_author2':book_author2 , 'book_price2' : book_price2 , 'book_id2':book_id2 ,'book_name3' : book_name3,'book_author3':book_author3 , 'book_price3' : book_price3 , 'book_id3':book_id3 ,'empty': empty ,'error': error , 'newpage' : newpage , 'oldpage': oldpage , 'group' : group , 'username' : username })
+
+
+
+def bank(request , username):
+    new_user = Users.objects.get(username__icontains=username)
+    new_user.books = ""
+    new_user.save()
+    
+    return render_to_response('bank.html' )
+
+
 
 
 

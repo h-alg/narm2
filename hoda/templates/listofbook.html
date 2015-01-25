@@ -105,7 +105,7 @@ window.onload=GetClock;
 <hr class="prettyline" style="position: relative;top: 5px;">
 <!-- Start css3menu.com BODY section id=1 -->
 <ul id="css3menu1" class="topmenu" style="position: relative;left: 900px;top: -10px;" >
-	<li class="topmenu"><a href="http://127.0.0.1:8000/kerase" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bdownload.png" alt="خروج"/>خروج</a></li>
+	<li class="topmenu"><a href="file:///D:/html/base.html" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bdownload.png" alt="خروج"/>خروج</a></li>
 	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bcontact.png" alt="ارتباط با ما"/>ارتباط با ما</a></li>
 	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bnews1.png" alt="درباره ما"/>درباره ما</a></li>
 	</ul>
@@ -137,46 +137,106 @@ window.onload=GetClock;
 <div class="row clearfix" >
 
 				<div class="col-md-8 column" >
-                    
+                    <table  border="3" bordercolor="#3B40FF" cellspacing="10" cellpadding="35" bgcolor= "#FFFFFF">
+
+<tr>
+    <td>
+<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
 
 
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > نام کتاب  : {{book_name1}} </p>
 
 
+				</div>
 
-<div id="table" style="position:absolute;top : 30px ;left:370px;height:465px;width:580px"">
-        		<table  id="t1" border="3" bordercolor="#3B40FF" cellspacing="10" cellpadding="20" bgcolor= "#FFFFFF">
-					
-					
-					<tr bgcolor="#E6E6FA">
-					  <th><p style="font-size : 12pt  ; color : black"> __قیمت__ </p> </th>
+			<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > انتشارات/نویسنده  : {{book_author1}} </p>
 
-					  <th><p style="font-size : 12pt  ; color : black">__نام کتاب__ </p>  </th>
-					  
 
-					  
-					</tr>
-					
-					<tr>
-					{%for m in list_of_book%}
-						<tr bgcolor="#3399FF">{%for x in m%}
-							<td bgcolor="#94B8B8"><p  style="font-size : 12pt  ; color : black"> {{x}} </p> </th>
+				</div>
 
-						{%endfor%}</tr>
-						
-					{%endfor%}
-					</tr>
-		
-	</table>
-                <a href="http://127.0.0.1:8000/bank/{{username}}"style="position: relative;top:80px;left: 45px;top:230px;"><img src="/static/hodaapp/img/order.gif" ></a>
+			<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > قیمت   : {{book_price1}} </p>
+
+
+				</div>
+
+
+                      <div  style="position: relative;top:80px;left: 45px;top:230px;"><a href="http://127.0.0.1:8000/endbuy/esparo/{{book_id1}}"><img src="/static/hodaapp/img/order.gif" ></a>
 
 </div>
+
+                      <img  src="/static/hodaapp/img/16.jpg"  style=" border:3px solid rgba(0, 25, 255, 0.90);border-radius: 5px;max-width: 200px;min-width: 200px;max-height: 200px;min-height: 200px;position: relative;left: 25px;top: -40px;">
+
+</td>
+<td>
+    <div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+
+
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > نام کتاب  : {{book_name2}} </p>
+
+
+				</div>
+
+			<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > انتشارات/نویسنده  : {{book_author2}} </p>
+
+
+				</div>
+
+			<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > قیمت   : {{book_price2}} </p>
+
+
+				</div>
+
+
+                      <div  style="position: relative;top:80px;left: 45px;top:230px;"><a href="http://127.0.0.1:8000/endbuy/esparo/{{book_id2}}"><img src="/static/hodaapp/img/order.gif" ></a>
+
 </div>
 
+                      <img  src="/static/hodaapp/img/16.jpg"  style=" border:3px solid rgba(0, 25, 255, 0.90);border-radius: 5px;max-width: 200px;min-width: 200px;max-height: 200px;min-height: 200px;position: relative;left: 25px;top: -40px;">
+
+</td>
+<td>
+<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
 
 
-                    
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > نام کتاب  : {{book_name3}} </p>
 
 
+				</div>
+
+			<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > انتشارات/نویسنده  : {{book_author3}} </p>
+
+
+				</div>
+
+			<div id="namk" style="background-color:#FFFFFF;width:250px;height:25px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > قیمت   : {{book_price3}} </p>
+
+
+				</div>
+
+
+                      <div  ><a href="http://127.0.0.1:8000/endbuy/esparo/{{book_id3}}"style="position: relative;top:80px;left: 45px;top:230px;"><img src="/static/hodaapp/img/order.gif" ></a>
+
+</div>
+
+                      <img  src="/static/hodaapp/img/16.jpg"  style=" border:3px solid rgba(0, 25, 255, 0.90);border-radius: 5px;max-width: 200px;min-width: 200px;max-height: 200px;min-height: 200px;position: relative;left: 25px;top: -40px;">
+
+</td>
+</tr>
+</table>
+
+                    <div style="position: relative;left: 350px;"><a href="http://127.0.0.1:8000/book/{{ username }}/{{group}}/{{oldpage}}"><img src="/static/hodaapp/img/left327.png" ></a></div>
+        
+{% if not empty %}
+</div>
+    <div style="position: relative;left: 450px;top: -90px;"><a href="http://127.0.0.1:8000/book/{{ username }}/{{group}}/{{newpage}}"><img src="/static/hodaapp/img/right328.png" ></a></div>
+    </div>
+{% endif %}
 
 
 <div class="col-md-4 column" >

@@ -4,7 +4,7 @@
 
   <head>
       <meta charset="UTF-8">
-
+        
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="/static/hodaapp/styles.css" type="text/css" />
         <meta name="author" content="for Codrops">
@@ -28,12 +28,11 @@
 
 <!-- End css3menu.com HEAD section -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<!-- Start WOWSlider.com HEAD section -->
-	<link rel="stylesheet" type="text/css" href="/static/hodaapp/engine1/style.css" media="screen" />
-	<script type="text/javascript" src="/static/hodaapp/engine1/jquery.js"></script>
-<!-- End WOWSlider.com HEAD section -->
 
+<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="/static/hodaapp/engine1//style.css" media="screen" />
+	<script type="text/javascript" src="/static/hodaapp/engine1//jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
 <style type="text/css">
 .btn {
  display: inline-block;
@@ -127,7 +126,7 @@ window.onload=GetClock;
                 </div>
 				<div class="col-md-4 column">
 
-<h3 style="position: relative;left: 1100px;top: -40px; text-shadow: 2px 2px 8px #3b40ff;color:Black;font-family:tahoma;font-size:20pt;" >لیست کتاب</h3>
+<h3 style="position: relative;left: 980px;top: -40px; text-shadow: 2px 2px 8px #3b40ff;color:Black;font-family:tahoma;font-size:20pt;" >لیست کتاب</h3>
 
 				</div>
 			</div>
@@ -136,51 +135,38 @@ window.onload=GetClock;
 
 <div class="row clearfix" >
 
-				<div class="col-md-8 column" >
-                    
+				<div class="col-md-8 column" style="position: relative;top: -100px;" >
+                   <div id="namk" style="background-color:#FFFFFF;width:300px;height:25px;position:relative;left:150px;top:125px;">
 
 
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > نام کتاب  : {{book_name}} </p>
 
 
+				</div>
 
-<div id="table" style="position:absolute;top : 30px ;left:370px;height:465px;width:580px"">
-        		<table  id="t1" border="3" bordercolor="#3B40FF" cellspacing="10" cellpadding="20" bgcolor= "#FFFFFF">
-					
-					
-					<tr bgcolor="#E6E6FA">
-					  <th><p style="font-size : 12pt  ; color : black"> __قیمت__ </p> </th>
+			<div id="namk" style="background-color:#FFFFFF;width:300px;height:25px;position:relative;left:150px;top:130px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > انتشارات/نویسنده  : {{book_author}} </p>
 
-					  <th><p style="font-size : 12pt  ; color : black">__نام کتاب__ </p>  </th>
-					  
 
-					  
-					</tr>
-					
-					<tr>
-					{%for m in list_of_book%}
-						<tr bgcolor="#3399FF">{%for x in m%}
-							<td bgcolor="#94B8B8"><p  style="font-size : 12pt  ; color : black"> {{x}} </p> </th>
+				</div>
 
-						{%endfor%}</tr>
-						
-					{%endfor%}
-					</tr>
-		
-	</table>
-                <a href="http://127.0.0.1:8000/bank/{{username}}"style="position: relative;top:80px;left: 45px;top:230px;"><img src="/static/hodaapp/img/order.gif" ></a>
+			<div id="namk" style="background-color:#FFFFFF;width:300px;height:25px;position:relative;left:150px;top:135px;">
+				<p dir="rtl" align="right" style="color: black;font-family:Tahoma;font-size:15px;" > قیمت   : {{book_price}} </p>
+
+
+				</div>
+
+
+                      <div class="topmenu" style="position: relative;top:80px;left: 200px;top: 200px;"><a href="http://127.0.0.1:8000/endbuy/{{username}}/{{book_id}}"><img src="http://iranidoc.ir/wp-content/uploads/2014/07/order.gif" style="position: relative;top: -25px;" ></a>
 
 </div>
-</div>
+
+                      <img  src="/static/hodaapp/img/16.jpg"  style=" border:3px solid rgba(0, 25, 255, 0.90);border-radius: 5px;position: relative;left: 500px;top: -50px;max-width: 250px;min-width: 250px;max-height: 300px;min-height: 300px;">
+				</div>
 
 
-
-                    
-
-
-
-
-<div class="col-md-4 column" >
-<ul class="v-menu" style="width: 290px;position:relative;left: 1000px;top: -625px;">
+<div class="col-md-4 column" style="position: relative;top: -250px;">
+<ul class="v-menu" style="position: relative;right: -900px;top: -200px;width: 290px;">
     <li><a href="http://127.0.0.1:8000/book/{{username}}/AR/1"><p href="http://127.0.0.1:8000/book/{{username}}/AR/1">هنری</p><img src="/static/hodaapp/img/170.jpg" border="0" style=" position:relative;right:-30px;top: -10px;"></a></li>
      <li><a href="http://127.0.0.1:8000/book/{{username}}/UN/1"><p href="http://127.0.0.1:8000/book/{{username}}/UN/1">دانشگاهی</p><img src="/static/hodaapp/img/23.jpg" border="0" style=" position:relative;right:-30px;top: -10px;"></a></li>
 
@@ -195,7 +181,25 @@ window.onload=GetClock;
 		</div>
 	</div>
 </div>
-</div>
+
+
+
+
+<div class="row clearfix">
+<div class="col-md-12 column">
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -205,8 +209,8 @@ window.onload=GetClock;
 
 	<script src="/static/hodaapp/js/kerase.js"></script>
 
-
-
+    
+    
   </body>
 
 </html>

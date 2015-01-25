@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     (r'^log/$', log),
     #(r'^aa/$', aa),
     (r'^aa/(?P<username>.+)/$', aa),
-    (r'^book/(?P<username>.+)/(?P<group>.+)/(?P<page>.+)$', book),
+   # (r'^book/(?P<username>.+)/(?P<group>.+)/(?P<page>.+)$', book),
+    (r'^book/(?P<username>.+)/(?P<group>.+)/(?P<page>.+)$', listofbook),
     (r'^proffer/(?P<username>.+)$', proffer),
     (r'^infbook/(?P<id_book>.+)$', inf_book),
     (r'^buy/(?P<username>.+)/(?P<id_book>.+)$', buy),
@@ -24,6 +25,7 @@ urlpatterns = patterns('',
 
     ###pegah
     (r'^search/$', search),
+    (r'^bank/(?P<username>.+)$', bank),
     #(r'^zeinab/$', zeinab),
 
     url(r'^admin/', include(admin.site.urls)),
