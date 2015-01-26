@@ -104,7 +104,7 @@ window.onload=GetClock;
 
 <hr class="prettyline" style="position: relative;top: 5px;">
 <!-- Start css3menu.com BODY section id=1 -->
-<ul id="css3menu1" class="topmenu" style="position: relative;left: 900px;top: -10px;" >
+<ul id="css3menu1" class="topmenu" style="position: relative;left: 850px;top: -10px;" >
 	<li class="topmenu"><a href="http://127.0.0.1:8000/kerase" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bdownload.png" alt="خروج"/>خروج</a></li>
 	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bcontact.png" alt="ارتباط با ما"/>ارتباط با ما</a></li>
 	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><img src="/static/hodaapp/login_files/css3menu1/bnews1.png" alt="درباره ما"/>درباره ما</a></li>
@@ -123,11 +123,12 @@ window.onload=GetClock;
 		<div class="col-md-12 column">
 			<div class="row clearfix">
 				<div class="col-md-8 column">
-                <h3 style="position: relative;left: 280px;top: 10px; text-shadow: 2px 2px 8px #3b40ff;color:Black;font-family:tahoma;font-size:20pt;" >مشخصات کتاب</h3>
+                            <h3 style="position: relative;left: 350px;top: 10px; text-shadow: 2px 2px 8px #3b40ff;color:Black;font-family:tahoma;font-size:20pt;" >فاکتور خرید</h3>
+
                 </div>
 				<div class="col-md-4 column">
 
-<h3 style="position: relative;left: 1100px;top: -40px; text-shadow: 2px 2px 8px #3b40ff;color:Black;font-family:tahoma;font-size:20pt;" >لیست کتاب</h3>
+<h3 style="position: relative;left: 980px;top: -40px; text-shadow: 2px 2px 8px #3b40ff;color:Black;font-family:tahoma;font-size:20pt;" >لیست کتاب</h3>
 
 				</div>
 			</div>
@@ -146,14 +147,14 @@ window.onload=GetClock;
 <p style="font-size : 12pt  ; color : black"> سبد خرید شما خالیست</p> 
 
 {% endif %}
-<div id="table" style="position:absolute;top : 30px ;left:370px;height:465px;width:580px"">
+<div id="table" style="position:absolute;top : 460px ;left:180px;height:465px;width:580px"">
         		<table  id="t1" border="3" bordercolor="#3B40FF" cellspacing="10" cellpadding="20" bgcolor= "#FFFFFF">
 					
 					
-					<tr bgcolor="#E6E6FA">
-					  <th><p style="font-size : 12pt  ; color : black"> __قیمت__ </p> </th>
+					<tr bgcolor="#ffffff">
+					  <th><p style="font-family:tahoma; font-size : 15pt  ; color : black"> قیمت</p> </th>
 
-					  <th><p style="font-size : 12pt  ; color : black">__نام کتاب__ </p>  </th>
+					  <th><p style="font-family:tahoma ;font-size : 15pt  ; color : black">عنوان کتاب</p>  </th>
 					  
 
 					  
@@ -161,16 +162,26 @@ window.onload=GetClock;
 					
 					<tr>
 					{%for m in list_of_book%}
-						<tr bgcolor="#3399FF">{%for x in m%}
-							<td bgcolor="#94B8B8"><p  style="font-size : 12pt  ; color : black"> {{x}} </p> </th>
+						<tr bgcolor="#62DDFC">{%for x in m%}
+							<td bgcolor="#D1E6FF"><p dir="rtl" align="center" style="font-family:tahoma;font-size : 12pt  ; color : black"> {{x}} </p> </th>
 
 						{%endfor%}</tr>
 						
 					{%endfor%}
-					</tr>
-		
+
+                <td >
+
+                <a href="http://127.0.0.1:8000/bank/{{username}}"style=""><img src="/static/hodaapp/img/order.gif" ></a>
+
+
+					</td>
+                <td>
+
+<p style="font-family:tahoma; font-size :8pt  ; color : black"> برای پرداخت از طریق درگاه بانک بر روی تصویر سمت چپ کلیک کنید</p>
+                </td>
+
+		</tr>
 	</table>
-                <a href="http://127.0.0.1:8000/bank/{{username}}"style="position: relative;top:80px;left: 45px;top:230px;"><img src="/static/hodaapp/img/order.gif" ></a>
 
 </div>
 </div>
@@ -183,7 +194,7 @@ window.onload=GetClock;
 
 
 <div class="col-md-4 column" >
-<ul class="v-menu" style="width: 290px;position:relative;left: 1000px;top: -625px;">
+<ul class="v-menu" style="width: 290px;position:relative;left: 900px;">
     <li><a href="http://127.0.0.1:8000/book/{{username}}/AR/1"><p href="http://127.0.0.1:8000/book/{{username}}/AR/1">هنری</p><img src="/static/hodaapp/img/170.jpg" border="0" style=" position:relative;right:-30px;top: -10px;"></a></li>
      <li><a href="http://127.0.0.1:8000/book/{{username}}/UN/1"><p href="http://127.0.0.1:8000/book/{{username}}/UN/1">دانشگاهی</p><img src="/static/hodaapp/img/23.jpg" border="0" style=" position:relative;right:-30px;top: -10px;"></a></li>
 
