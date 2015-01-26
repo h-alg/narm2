@@ -1,3 +1,5 @@
+# -- coding: utf-8
+from __future__ import unicode_literals
 from django.shortcuts import render
 from django.template.loader import get_template
 from django.template import Context
@@ -468,7 +470,7 @@ def endbuy(request , username , id_book):
     for i in range( len(list_of_book)):
         sum = sum + int(list_of_book[i][0])
 
-    l=[ sum,"       sum   " ]
+    l=[ sum,"      جمع کل   " ]
     list_of_book.append(l)
 
 
