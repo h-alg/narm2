@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     ###pegah
     (r'^search/$', search),
     (r'^bank/(?P<username>.+)$', bank),
+    (r'^sabad/(?P<username>.+)$', sabad),
     #(r'^zeinab/$', zeinab),
 
     url(r'^admin/', include(admin.site.urls)),
