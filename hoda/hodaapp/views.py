@@ -285,14 +285,14 @@ def search(request):
     if 'q' in request.GET and request.GET['q']:
         message = request.GET['q']
         #phrase = message.encode('utf-8')
-        if s_name=="author name":
+        if s_name=="نام ناشر":
             list_search = Book.objects.filter(author__icontains=message)
-        if s_name=="name of book":
+        if s_name=="عنوان کتاب":
             list_search = Book.objects.filter(name__icontains=message)
 
         if str(list_search)=="[]":
-            errors.append("not found")
-            return render_to_response('base2.html',{'errors':errors})
+            errors.append("کتابی یافت نشد")
+            return render_to_response('afterlog1.html',{'errors':errors})
         else:
             ##########
             final_list = []
@@ -308,8 +308,8 @@ def search(request):
             #endlist = list_search
             return render_to_response('proffer.html',{'endlist':final_list })
     else:
-        errors.append("empty field")
-        return render_to_response('base2.html',{'errors':errors})
+        errors.append("فیلد جست و جو را پر کنید")
+        return render_to_response('afterlog1.html',{'errors':errors})
 
 
 def search1(request):
